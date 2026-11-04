@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Vought Project</title>
+<meta name="description" content="Vought Project brings the latest One UI to Galaxy A51, A12 and A35. Install guides and wiki included.">
+<meta name="theme-color" content="#000000">
+<!-- Open Graph: WhatsApp, Telegram, Discord, Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Vought Project">
+<meta property="og:title" content="Vought Project">
+<meta property="og:description" content="Making your device Stronger, Smarter &amp; Better. Latest One UI for Galaxy A51, A12 and A35.">
+<meta property="og:url" content="https://voughtproject.github.io/">
+<meta property="og:image" content="https://voughtproject.github.io/preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Vought Project logo">
+<!-- Twitter/X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Vought Project">
+<meta name="twitter:description" content="Making your device Stronger, Smarter &amp; Better.">
+<meta name="twitter:image" content="https://voughtproject.github.io/preview.png">
+<link rel="icon" id="favicon" type="image/png" sizes="32x32" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFgElEQVR4nM2XXWxU1RbHf2ufc2ZKpDpDJ/0kfVCrVbmJuZBbKCgaFD8iiQhBQ1UEQq42PEATA9NGhumXrUWEoq0mBhNz4zWNkRIMoICVtjfCC8FEy1TeKralQcoNH2V6ztnbB5iKWHAIAv6T87Sz9/+/1l7/tc8SQGKxmMTjcd3dve9pUKtc1y0xxmQaYwCE64MREUTktOM4B0FvmjVrzs5YLKbi8biRtrY2a9GiRf433+xpCQYDr7muy6W8cp30F84CMIiA4zgkk6OtjzzyeHlbW5slAHv3ftmSlRV67dSp/+v8/Mnk5OQopSyMMX+JABFBa5/jx4/r/v5jhEJ3qF9+OdX62GNPlEtHx54nMzKCu0ZHk15x8RQrHJ4knudeH+sVYNsOw8MnTSLxvR8IBO3z55NP2WBed91Rk5c3WcLhSZJMnkcpdUMEJJPnCYcnSV7eZBkc/NmAeV1p7ZeASHZ2tuV57g0jB1BK4Xku2dnZFoho7ZcoEXVbavFmIcUlom5TxvxWpzcbxhhjM47Ps7PzyM3NpaCgAK19bNvh0KFDbN78Dr29P7Jly7vMnFmK1vqiUyR1IACu62HMhTWlLPr7f2ZgYJChoYHLqcQeT1lZ2WK6urr54ovtGGOwbZumpg1UV9fS3v45LS2tvPDC88ye/TC+r7Ft6yKZQkQIhUI4joPWGhGhtHQWCxcuGDcLsm/fbuM4Dg8++E9s28EYw5kzZ7jvvilEo2spL38V3/fxfU1R0b1UVUUZHR1l8+ZmQqEw586dw/d9LMvC8zxEhO7u/WRlZSEifPzxf1izZi09Pd8TDocQETzP5fDhQ7iuy7gZmDhxIlVVldTW1vLyyy+SkZFBIOBQXR0nGq0kkfiBsrLFaK1JJkdJuWfOnLnMm/cMkUgEz/PQWlNdXUNFxWrC4dC4GRi39LXWLF++lMzM22lq2oBt23iex0svlRGJRKivbyAcDpOVlUV+fh6FhYV0dnZx9uwZqqoq0Vpj2zbvv/8BnuexcmU5WutrE+A4DnV1NbS2fsDg4CAiglKKuroatm79iP7+AbTW+L7PyMgI0WgVq1evJhS6A2MMp0+f5q23NlBZuZYJEyZcmwDbttFa89xz87nnniLWrVs/dsfz5j1DUdHdxOPVKKWwLIvm5i0EAg4rV5bjeR6WZbFx4yYyMzNZtmwpWmssy0pfAPxmqcbGBtrbt5NIJFBKYYyhoeFNtm1rp7f3R0ZGRti4cROx2DqCwSAiwokTJ3jvvRZqauLYtv07q6YtwLIsfN9n5sxSSktnsGZNFKUUWmumTy/Bsix6e3t5++13yM3Noaxs8Vj0tbX1FBYWsnDhgqtGf1UBl2aisfFNvv32AJ2dnViWRWNjE5FIhClTHqC5eQuNjQ1jNdLX18cnn/yX+vra32XyShi3D1yKlMdXrPg3iUQv27Z9xv33/4OtWz9kz569HD78Hfv3f43nedi2zZIlS+nr+4mOjr1orf/wxqTVBy7fYIxh/foYs2c/yoIFi5g6dSp33XUny5Z9ys6dO8a6YE9PD7t27WbHju1pRQ9pXEHq3gsK8lmxYjlHjhyhrq6aN95Yz0MPzWLatGn4vo9Simi0ihkzplNS8q+xzP0Z/jQDKRHGGF55ZQmOE2B4+BSdnZ0cOPC/sabT1dV9sU460or8mgSkLJSTk0NFxSrmzn2SYDDIqlUVJJNJHMfh6NGjzJ//LMXFxWlHn7aAy/HVV7uvup4uOVyogVv2QwIYJVdqUTcBIiLKGH0WuOJjcSOQ4jJGn1VKWQfBmKGhId+2nRsq5IJjHIaGhnwwRinroAJpcpyADAwcM8PDJ00wmMHFWe4v/4LBDIaHT5qBgWPGcQIC0nTrR7O/w3B6S8fzXwF33cwgoVx8FgAAAABJRU5ErkJggg==">
+<link rel="apple-touch-icon" href="assets/img-393f4160.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--banner-outline:oklch(0 0 0);--bg:#f5f5f3;--ink:#0b0b0c;--mute:#6a6d72;--line:#d9d9d5;--card:#fff;
+--font:'Montserrat',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color-scheme:light;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(env(safe-area-inset-top,0px) + 80px)}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);line-height:1.65}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+h1,h2,h3{font-weight:800;line-height:1.08;margin:0;letter-spacing:-.02em}
+p{margin:0 0 1em;color:var(--mute);max-width:56ch}
+.wrap{max-width:1040px;margin:0 auto;padding:0 28px}
+.btn{display:inline-block;padding:13px 26px;border-radius:2px;font-weight:600;font-size:.92rem;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;font-family:inherit;transition:background .15s,color .15s}
+.btn.solid{background:var(--ink);color:#fff}
+.btn.solid:hover{background:#2a2c30}
+.btn.ghost:hover{background:rgba(0,0,0,.06)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:rgba(245,245,243,.88);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{display:flex;align-items:center;gap:10px;font-weight:800;font-size:.95rem}
+.brand img,.logo{filter:invert(1)}
+.brand img{height:24px;width:auto}
+nav ul{display:flex;gap:32px;list-style:none;margin:0;padding:0;font-size:.88rem;font-weight:500;color:var(--mute)}
+nav ul a:hover{color:var(--ink)}
+/* hero + picker */
+.hero{padding:120px 0 40px;overflow-anchor:none}
+.hero .top{display:flex;justify-content:space-between;align-items:center;gap:32px;margin-bottom:24px}
+.hero h1{font-size:clamp(2.6rem,9vw,6.5rem);height:2.2em;text-transform:uppercase;white-space:pre;overflow:visible}
+.hero .logo{width:min(300px,32vw);height:auto;flex:none}
+.intro .tag{font-size:1.1rem;margin:22px 0 32px}.cta{display:flex;gap:12px;flex-wrap:wrap}.devsec{padding-top:72px}.devsec h2{font-size:clamp(1.8rem,4vw,2.8rem);margin-bottom:28px}.pick{display:flex;gap:14px}
+.pick>.dev{flex:1 1 0;min-width:0}
+.dev{text-align:left;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:26px 26px 22px;cursor:pointer;font-family:inherit;color:var(--ink);transition:background .2s,color .2s,border-color .2s}
+.dev strong{display:block;font-size:clamp(1.5rem,3.4vw,2.3rem);font-weight:800;letter-spacing:-.02em}
+.dev span{display:block;font-size:.85rem;color:var(--mute);margin-top:6px}
+.dev:hover{border-color:var(--ink)}
+.dev[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.dev[aria-pressed="true"] span{color:#a9acb2}
+.panel{margin-top:14px;background:var(--card);border:1px solid var(--line);border-radius:4px;padding:36px}
+.panel h2{font-size:1.6rem;margin-bottom:6px}
+.panel>p{margin-bottom:28px}
+.ed{display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center;padding:22px 0;border-top:1px solid var(--line)}
+.ed h3{font-size:1.1rem}
+.ed .ver{font-size:.82rem;color:var(--mute);font-weight:500;margin-top:2px}
+.ed p{margin:0;font-size:.95rem}
+.ed .act{display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.inf-wrap{display:flex;align-items:center;justify-content:flex-end}
+.inf-panel{overflow:hidden;max-width:0;opacity:0;white-space:nowrap;transition:max-width .34s cubic-bezier(.2,.8,.2,1),opacity .22s ease,margin .34s cubic-bezier(.2,.8,.2,1)}
+.inf-panel.open{opacity:1;margin-right:12px}
+.inf-in{display:inline-flex;align-items:center;font-size:.85rem;color:var(--mute);font-weight:500}
+.inf-in b{color:var(--ink);font-weight:600}
+.inf-in i{width:1px;height:14px;background:var(--line);margin:0 12px}
+.ed.old .inf-in b{color:var(--mute)}
+.btn.inf{display:inline-flex;align-items:center;gap:8px;padding:13px 16px}
+.btn.inf:hover{background:rgba(0,0,0,.06)}
+.btn.inf svg{transition:transform .3s ease}
+.btn.inf[aria-expanded="true"] svg{transform:rotate(180deg)}
+@media(prefers-reduced-motion:reduce){.inf-panel,.btn.inf svg{transition:none}}
+@media(max-width:600px){.ed .act{justify-content:flex-start}.inf-in{font-size:.76rem}.inf-in i{margin:0 8px}.inf-panel.open{margin-right:8px}.btn.inf{padding:13px 12px}}
+.ed .uiv{color:var(--ink);font-weight:600}.ed .uiv::before{content:"\00b7";margin:0 8px;color:var(--mute);font-weight:700}.ed.old .uiv{color:var(--mute)}
+.note{margin:24px 0 0;padding-top:22px;border-top:1px solid var(--line);font-size:.9rem}
+.note a{text-decoration:underline;color:var(--ink)}
+/* sections */
+section{padding:96px 0 0}
+.sec{display:grid;grid-template-columns:1fr 2fr;gap:48px}
+.sec>h2{font-size:clamp(1.5rem,3vw,2rem)}
+.cols{display:grid;grid-template-columns:1fr 1fr 1fr;gap:40px}
+.cols div{border-top:2px solid var(--ink);padding-top:18px}
+.cols h3{font-size:1.05rem;margin-bottom:8px}
+.cols p{margin:0;font-size:.93rem}
+details{border-top:1px solid var(--line);padding:22px 0}
+details:last-child{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:16px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font-size:1.4rem;line-height:1;transition:transform .35s}
+details[open] summary::after{transform:rotate(45deg)}
+details.closing summary::after{transform:none}
+details p{margin:12px 0 0}
+footer{margin-top:64px;border-top:1px solid var(--line);padding:40px 0 48px;font-size:.88rem;color:var(--mute)}
+footer .wrap{display:flex;justify-content:space-between;gap:28px;flex-wrap:wrap}
+footer .copyright{margin:10px 0 0;display:grid;gap:2px;line-height:1.45}
+footer .copyright p{margin:0}
+footer ul{list-style:none;margin:0;padding:0;display:flex;gap:24px}
+footer a:hover{color:var(--ink)}
+:root[data-theme="dark"]{--banner-outline:oklch(1 0 0);--bg:#000;--ink:#f2f2f0;--mute:#9a9da3;--line:#26282b;--card:#0a0a0b;color-scheme:dark}
+[data-theme="dark"] .brand img,[data-theme="dark"] .logo{filter:none}
+[data-theme="dark"] nav{background:rgba(0,0,0,.85)}
+[data-theme="dark"] .btn.solid{color:#000}
+[data-theme="dark"] .btn.solid:hover{background:#cfd2d6}
+[data-theme="dark"] .btn.ghost:hover{background:rgba(255,255,255,.1)}
+[data-theme="dark"] .dev[aria-pressed="true"]{color:#000}
+[data-theme="dark"] .dev[aria-pressed="true"] span{color:#55585d}
+.dot{display:inline-block;width:.13em;height:.13em;margin-left:.06em;border-radius:50%;background:currentColor;vertical-align:0}
+.typing .dot,.typing .bar{animation:none}
+.bar{display:inline-block;width:.06em;height:.8em;margin-left:.08em;background:currentColor;vertical-align:-.04em;animation:blink 1s steps(1) infinite}
+@keyframes blink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.dot,.bar{animation:none}}
+#wipe{position:fixed;inset:0;z-index:90;pointer-events:none;visibility:hidden}
+.fab{position:fixed;right:max(20px,env(safe-area-inset-right,0px));bottom:calc(env(safe-area-inset-bottom,0px) + 20px);z-index:100;width:54px;height:54px;border-radius:50%;border:1px solid var(--ink);background:var(--ink);color:var(--bg);display:grid;place-items:center;cursor:pointer;padding:0;transition:scale .2s}
+.fab:hover{scale:1.06}
+.fab{box-shadow:0 6px 18px rgba(0,0,0,.28)}
+.fab svg{grid-area:1/1;width:22px;height:22px;transition:opacity .25s,transform .35s}
+.fab .i-up{opacity:0;transform:translateY(8px)}
+.fab.up .i-up{opacity:1;transform:none}
+.fab.up .i-theme{opacity:0;transform:rotate(90deg) scale(.6)}
+body>nav,body>header,body>section,body>main,body>footer{transition:opacity .4s ease,filter .4s ease}
+body.fading>nav,body.fading>header,body.fading>section,body.fading>main,body.fading>footer{opacity:0;filter:blur(14px);pointer-events:none}
+body.xout>header,body.xout>section,body.xout>main,body.xout>footer{opacity:0;filter:blur(12px);pointer-events:none;transition-duration:.3s}
+body.in-detail>nav,body.in-detail>header,body.in-detail>section,body.in-detail>main,body.in-detail>footer{display:none}
+#detail{display:none;opacity:0;filter:blur(14px);transition:opacity .4s ease,filter .4s ease;padding:56px 0 96px;min-height:100svh}
+body.in-detail #detail{display:block}
+#detail.show{opacity:1;filter:none}
+.dbanner.img{aspect-ratio:auto;border:2px solid var(--banner-outline);background:none;overflow:hidden}.dbanner.img img{width:100%;height:auto;display:block;border-radius:0}.dbanner{aspect-ratio:21/9;display:grid;place-items:center;border:2px solid var(--banner-outline);border-radius:4px;background:var(--card);color:var(--mute);font-size:.85rem;margin-bottom:36px}
+#detail h2{font-size:clamp(2rem,5vw,3.4rem)}
+.dmeta{margin:10px 0 28px;font-weight:500}
+.dl-top{display:grid;grid-template-columns:2fr 1fr;gap:14px;margin:0}
+.dl-card{background:var(--card);border:1px solid var(--line);border-radius:4px}
+.dl-spec{margin:0;padding:6px 28px}
+.dl-spec>div{display:grid;grid-template-columns:170px 1fr;gap:16px;padding:15px 0;border-top:1px solid var(--line)}
+.dl-spec>div:first-child{border-top:0}
+.dl-spec dt{font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);padding-top:3px}
+.dl-spec dd{margin:0;font-weight:600}
+.dl-get{padding:28px;display:flex;flex-direction:column;justify-content:space-between;gap:28px}
+.dl-get .lab{font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0 0 10px}
+.dl-get .big{color:var(--ink);font-size:1.6rem;font-weight:800;letter-spacing:-.02em;line-height:1.15;margin:0}
+.dl-get .sub{font-size:.85rem;margin:8px 0 0}
+.dl-get .btns{display:grid;gap:10px}
+.dl-get .btn{text-align:center;width:100%}
+.ds{display:grid;grid-template-columns:1fr 2fr;gap:48px;margin-top:88px}
+.ds>h3{margin:0;font-size:clamp(1.5rem,3vw,2rem);font-weight:800;letter-spacing:-.02em;line-height:1.08}
+.ds>div{min-width:0}
+.ft{list-style:disc;margin:0;padding:0 0 0 1.2em;display:block}
+.ft li{padding:4px 0;font-weight:600;line-height:1.4;color:var(--ink)}
+.ft li::marker,.warn li::marker,.cl li::marker{color:var(--mute)}
+.cl details summary .n{margin-left:auto;font-weight:500;color:var(--mute);font-size:.88rem}
+.cl details summary{align-items:baseline}
+.cl ul{list-style:disc;margin:14px 0 0;padding:0 0 0 1.2em}
+.cl li{padding:5px 0;color:var(--mute);font-weight:500}
+.warn{list-style:disc;margin:0;padding:0 0 0 1.2em}
+.warn li{padding:5px 0;font-weight:600;line-height:1.5;color:var(--ink)}
+.warn a{text-decoration:underline;text-underline-offset:3px;color:var(--ink)}
+.cr{margin:0;max-width:56ch}
+.cr strong{color:var(--ink);font-weight:800}.cr+.cr{margin-top:14px}
+@media(max-width:820px){.ds{grid-template-columns:1fr;gap:20px;margin-top:64px}.ft{grid-template-columns:1fr}}
+@media(max-width:820px){.dl-top{grid-template-columns:1fr}.dl-spec>div{grid-template-columns:1fr;gap:2px}.dl-spec{padding:6px 22px}.ds{margin-top:36px}.box{padding:6px 20px}.cl{grid-template-columns:1fr;gap:24px}.warn{padding:0 0 0 1.2em}}
+.feats{display:block}
+.sec.wrap{padding-top:96px}
+.team-cta{margin-top:40px;padding-top:26px;border-top:1px solid var(--line)}
+.team-cta .team-lab{font-size:.74rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--mute);margin:0 0 10px}
+.fx{padding:110px 0;color:var(--fg);background:var(--bgc)}
+.fx.b1{--bgc:#d6d6d2;--fg:#0b0b0c;--fgm:#2a2d32;--fgl:rgba(11,11,12,.34)}
+.fx.b2{--bgc:#b3b3ae;--fg:#0b0b0c;--fgm:#25282c;--fgl:rgba(11,11,12,.36)}
+.fx.b3{--bgc:#e1e1dd;--fg:#0b0b0c;--fgm:#2a2d32;--fgl:rgba(11,11,12,.32)}
+.fxin{max-width:1180px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.35fr);gap:104px;align-items:center}
+.fx:nth-child(even) .fxin{grid-template-columns:minmax(0,1.35fr) minmax(0,1fr)}
+.fx:nth-child(even) .ftext{order:2}
+.fx:nth-child(even) .fimg{order:1}
+.ftext{position:relative}
+.ftext h3{font-size:clamp(1.6rem,2.7vw,2.4rem);font-weight:800;letter-spacing:-.02em;line-height:1.12;margin-bottom:18px;color:var(--fg)}
+.ftext h3 .lt{display:block;font-weight:300;letter-spacing:.01em}
+.ftext p{margin:0 0 1.3em;color:var(--fgm);font-size:clamp(.92rem,1.1vw,1.02rem);font-weight:600;line-height:1.6;text-align:justify;hyphens:none;overflow-wrap:normal;max-width:34em}
+.ftext p:last-child{margin-bottom:0}
+.ftext::after{display:none;content:"";position:absolute;top:-10px;bottom:-10px;right:-37px;width:2px;background:linear-gradient(to bottom,transparent,var(--fgl) 18%,var(--fgl) 82%,transparent)}
+.fx:nth-child(even) .ftext::after{right:auto;left:-37px}
+.fimg{display:flex;align-items:center;justify-content:center}.fimg img{width:118%;max-width:none;height:auto;display:block}@media(max-width:820px){.fimg img{width:100%}}
+@media(max-width:820px){.fx{padding:72px 0}.fxin{grid-template-columns:1fr!important;gap:60px}.fx:nth-child(even) .ftext,.fx:nth-child(even) .fimg{order:0}.ftext{padding-left:22px}.ftext::after,.fx:nth-child(even) .ftext::after{left:0;right:auto}.ftext p{text-align:left}}
+
+.phead{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:6px}
+.phead h2{margin:0}
+.phead .btn{padding:10px 18px;font-size:.85rem}
+.legwrap{flex:none;width:64px;display:flex;align-items:stretch;background:var(--card);border:1px dashed var(--line);border-radius:4px;overflow:hidden;transition:width .5s cubic-bezier(.3,.7,.2,1),background .2s,border-color .2s}
+.legwrap.open{width:min(320px,34%)}
+.legwrap.on{background:var(--ink);border-color:var(--ink)}
+.legtoggle{flex:none;width:62px;background:none;border:0;color:var(--ink);cursor:pointer;display:grid;place-items:center;padding:0}
+.legtoggle svg{width:22px;height:22px;transition:transform .5s}
+.legwrap.open .legtoggle svg{transform:rotate(180deg)}
+.legwrap.on .legtoggle{color:var(--bg)}
+.legwrap .dev{flex:1;min-width:0;border:0;border-radius:0;background:transparent;white-space:nowrap;visibility:hidden;transition:background .2s,color .2s,visibility 0s .5s}
+.legwrap.open .dev{visibility:visible;transition:background .2s,color .2s,visibility 0s}
+.legwrap .dev[aria-pressed="true"]{background:transparent;color:var(--bg)}
+.btn.off{opacity:.35;pointer-events:none}
+.soon{margin-top:26px;padding:56px 24px;border:1px dashed var(--line);border-radius:4px;text-align:center}.soon-t{font-size:clamp(1.5rem,3.2vw,2.3rem);font-weight:800;letter-spacing:.05em;line-height:1.1;color:var(--ink)}.soon-t span{font-weight:300}.soon p{margin:12px auto 0;max-width:44ch;color:var(--mute)}
+.dgrp{font-size:1.05rem;margin:28px 0 4px}
+.dgrp:first-of-type{margin-top:8px}
+.drawer{border-top:1px solid var(--line)}
+.dhead{width:100%;display:flex;align-items:center;gap:12px;background:none;border:0;padding:22px 0;color:var(--ink);font-family:inherit;font-weight:600;font-size:1rem;cursor:pointer;text-align:left}
+.dcount{font-size:.75rem;font-weight:600;color:var(--mute);border:1px solid var(--line);border-radius:2px;padding:1px 8px}
+.dplus{margin-left:auto;width:14px;height:14px;position:relative}
+.dplus::before,.dplus::after{content:"";position:absolute;left:0;right:0;top:50%;height:2px;margin-top:-1px;background:currentColor}
+.dplus::after{transform:rotate(90deg);transition:transform .35s}
+.dhead[aria-expanded="true"] .dplus::after{transform:rotate(0)}
+.dbody{display:grid;grid-template-rows:0fr;transition:grid-template-rows .45s cubic-bezier(.3,.7,.2,1)}
+.dbody.open{grid-template-rows:1fr}
+.dinner{overflow:hidden;min-height:0;visibility:hidden;transition:visibility 0s .45s}
+.dbody.open .dinner{visibility:visible;transition:visibility 0s}
+.ed.old h3,.ed.old p{color:var(--mute)}
+.ed h3{letter-spacing:.04em}
+.ed p.ui{font-size:1.05rem;font-weight:600;color:var(--ink);letter-spacing:-.01em}
+.ed.old p.ui{color:var(--mute)}
+.ed.old .btn.solid{background:transparent;color:var(--ink)}
+.ed.old .btn.solid:hover{background:rgba(127,127,127,.15)}
+
+@media(max-width:820px){
+ nav ul{display:none}
+ .hero{padding-top:56px}
+ .hero .top{flex-direction:column-reverse;align-items:flex-start;gap:24px;margin-bottom:36px}
+ .hero .logo{width:140px}
+ .pick{display:grid;grid-template-columns:1fr 1fr}
+ .legwrap{grid-column:1/-1;justify-self:start;min-height:64px}
+ .legwrap.open{width:100%}
+ .panel{padding:26px 22px}
+ .ed,.sec,.cols{grid-template-columns:1fr;gap:16px}
+ .sec{gap:28px}
+ section{padding-top:72px}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+body.in-wiki>header,body.in-wiki>section,body.in-wiki>main:not(#wiki),body.in-wiki>footer,body.in-wiki>#detail{display:none}
+#wiki{display:none}body.in-wiki #wiki{display:block}body.in-wiki #fab{display:grid}
+@scope (#wiki){/* layout */
+.layout{max-width:1180px;margin:0 auto;padding:0 28px;display:grid;grid-template-columns:250px minmax(0,1fr);gap:64px}
+.side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 64px);align-self:start;max-height:calc(100vh - 64px);overflow:auto;scrollbar-width:none;-ms-overflow-style:none;padding:36px 0 48px}
+.side::-webkit-scrollbar{display:none;width:0;height:0}
+.search{position:relative;margin-bottom:26px}
+.search input{width:100%;font:500 .9rem var(--font);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:2px;padding:11px 54px 11px 14px}
+.search input::placeholder{color:var(--mute)}
+.search input:focus{outline:none;border-color:var(--mute)}
+.search input:focus-visible{outline:none}
+.search kbd{position:absolute;right:10px;top:50%;transform:translateY(-50%);pointer-events:none}
+.sgrp{font-size:.78rem;font-weight:600;color:var(--mute);margin:24px 0 8px;letter-spacing:.02em}
+.side a.pl{display:block;padding:7px 14px;margin-left:-14px;border-left:2px solid transparent;font-size:.93rem;font-weight:500;color:var(--mute)}
+.side a.pl:hover{color:var(--ink)}
+.side a.pl.on{color:var(--ink);font-weight:600;border-left-color:var(--ink)}
+.noresult{display:none;font-size:.9rem;color:var(--mute)}
+.doc{padding:56px 0 110px;min-width:0}
+.page{display:none}
+.page.show{display:block;animation:in .35s ease both}
+@keyframes in{from{opacity:0;filter:blur(12px);transform:translateY(10px)}to{opacity:1;filter:none;transform:none}}
+@keyframes out{to{opacity:0;filter:blur(10px);transform:translateY(-6px)}}
+.crumb{font-size:.85rem;font-weight:500;color:var(--mute);margin-bottom:14px}
+.page h1{font-size:clamp(2.1rem,4.6vw,3.2rem);margin-bottom:20px}
+.lead{font-size:1.2rem;font-weight:500;color:var(--ink);line-height:1.6;max-width:44ch;margin-bottom:1.4em}
+.page h2{font-size:1.5rem;margin:52px 0 14px;padding-top:28px;border-top:1px solid var(--line)}
+.page h2.first{margin-top:36px}
+.page a.ext,.page p a,.page li a{text-decoration:underline;text-underline-offset:3px;color:var(--ink)}
+.page li{color:var(--mute)}
+.page li b,.page p b{color:var(--ink);font-weight:600}
+kbd{font:600 .8rem var(--font);border:1px solid var(--line);border-bottom-width:2px;border-radius:3px;padding:2px 8px;background:var(--card);color:var(--ink);white-space:nowrap}
+code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.86em;background:var(--card);border:1px solid var(--line);border-radius:3px;padding:1px 6px;color:var(--ink)}
+pre{margin:0 0 1.2em;padding:16px 18px;background:var(--card);border:1px solid var(--line);border-radius:3px;overflow:auto;font-size:.88rem}
+pre code{background:none;border:0;padding:0}
+.callout{border:1px solid var(--line);border-left:3px solid var(--ink);background:var(--card);padding:18px 22px;border-radius:2px;margin:26px 0}
+.callout b{display:block;color:var(--ink);margin-bottom:4px}
+.callout p,.callout ul{margin:0;font-size:.95rem}
+.callout ul{padding-left:0;list-style:none}
+.callout ul li{padding-left:1.7em;position:relative}
+.callout ul li::before{content:"\2715";position:absolute;left:0;color:var(--ink);font-weight:800}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin:18px 0 8px}
+.card{display:block;border:1px solid var(--line);background:var(--card);border-radius:4px;padding:22px;transition:border-color .2s}
+.card:hover{border-color:var(--ink)}
+.card strong{display:block;font-size:1.12rem;font-weight:800;color:var(--ink);letter-spacing:-.01em}
+.card span{display:block;font-size:.88rem;color:var(--mute);margin-top:6px;line-height:1.5}
+.cards.two{grid-template-columns:1fr 1fr}
+.tbl{width:100%;border-collapse:collapse;margin:18px 0 8px;font-size:.93rem}
+.tbl th,.tbl td{text-align:left;padding:14px 16px 14px 0;border-bottom:1px solid var(--line);vertical-align:top;color:var(--mute)}
+.tbl th{font-weight:600;color:var(--ink);font-size:.85rem;border-bottom:1px solid var(--ink)}
+.tbl td:first-child{font-weight:600;color:var(--ink);white-space:nowrap;padding-right:28px}
+.tblwrap{overflow-x:auto}
+.steps{list-style:none;counter-reset:s;margin:26px 0;padding:0}
+.steps>li{counter-increment:s;position:relative;padding:0 0 30px 64px;margin:0}
+.steps>li::before{content:counter(s);position:absolute;left:0;top:0;width:40px;height:40px;border:1px solid var(--ink);border-radius:2px;display:grid;place-items:center;font-weight:800;color:var(--ink)}
+.steps>li::after{content:"";position:absolute;left:20px;top:50px;bottom:6px;width:1px;background:var(--line)}
+.steps>li:last-child{padding-bottom:0}
+.steps>li:last-child::after{display:none}
+.steps h3{font-size:1.1rem;margin:7px 0 8px;letter-spacing:-.01em;color:var(--ink)}
+.steps p{margin:0 0 .8em}
+.steps ul,.steps ol{margin:.4em 0 .8em}
+.dls{display:flex;gap:10px;flex-wrap:wrap;margin:6px 0 20px}
+.meta{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 26px}
+.tag{font-size:.8rem;font-weight:600;border:1px solid var(--line);background:var(--card);border-radius:2px;padding:3px 10px;color:var(--ink)}
+.pn{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:72px}
+.pn a{border:1px solid var(--line);background:var(--card);border-radius:4px;padding:18px 22px;transition:border-color .2s}
+.pn a:hover{border-color:var(--ink)}
+.pn a small{display:block;font-size:.78rem;color:var(--mute);font-weight:500}
+.pn a strong{font-size:1rem;font-weight:800;color:var(--ink)}
+.pn a{display:flex;align-items:center;gap:16px}.pn a .arr{flex:none;display:grid;place-items:center;color:var(--ink)}.pn a .arr svg{width:20px;height:20px}.page a.btn,.page a.btn:hover{text-decoration:none}.pn a.next{text-align:right;grid-column:2;flex-direction:row-reverse}
+.pn a.prev{grid-column:1}
+@media(max-width:900px){.layout{grid-template-columns:1fr;gap:0}.side{display:none;position:fixed;inset:64px 0 0;z-index:15;background:var(--bg);max-height:none;padding:24px 28px 90px}.doc{padding-top:36px}.steps>li{padding-left:56px}.pn,.cards.two{grid-template-columns:1fr}.pn a.next,.pn a.prev{grid-column:1}}
+h1,h2,h3{letter-spacing:0}.page h1{font-size:3.2rem}.page p{max-width:64ch}.page section{padding:0}.page[hidden]{display:none}.wiki-menu{display:none}.search input{padding-right:14px}.search kbd{display:none}
+@media(max-width:900px){.wiki-menu{display:inline-block;margin:24px 28px 0}.page h1{font-size:2.1rem}.layout{padding:0 28px}.side{top:64px}.side.open{display:block}.tbl td:first-child{white-space:normal}.doc{padding-bottom:70px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+}
+body.wiki-menu-open{overflow:hidden}
+.wiki-back{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;font-weight:600;color:var(--mute);margin-bottom:18px;transition:color .2s,gap .2s}
+.wiki-back:hover{color:var(--ink);gap:11px}.wiki-back svg{width:16px;height:16px}
+
+
+/* search palette */
+.sopen{display:flex;align-items:center;gap:10px;width:100%;font:500 .9rem var(--font);color:var(--mute);background:var(--card);border:1px solid var(--line);border-radius:2px;padding:10px 12px;cursor:pointer;text-align:left;transition:border-color .2s,color .2s}
+.sopen:hover{border-color:var(--ink);color:var(--ink)}
+.sopen svg{width:16px;height:16px;flex:none}
+.sopen .sk{margin-left:auto;font:600 .72rem var(--font);border:1px solid var(--line);border-bottom-width:2px;border-radius:3px;padding:1px 6px;color:var(--mute)}
+#wiki #msearch{margin-left:0}
+#wiki #menubtn{margin-right:10px}
+html:has(.spal.open){overflow:hidden;scrollbar-gutter:stable}
+.spal{position:fixed;inset:0;z-index:120;display:flex;justify-content:center;align-items:flex-start;padding:max(10vh,calc(env(safe-area-inset-top,0px) + 16px)) 16px 16px;visibility:hidden;pointer-events:none;transition:visibility 0s .26s}
+.spal.open{visibility:visible;pointer-events:auto;transition-delay:0s}
+.spal-back{position:absolute;inset:0;background:rgba(245,245,243,.5);opacity:0;-webkit-backdrop-filter:blur(0);backdrop-filter:blur(0);transition:opacity .25s ease,backdrop-filter .25s ease,-webkit-backdrop-filter .25s ease}
+[data-theme="dark"] .spal-back{background:rgba(0,0,0,.55)}
+.spal.open .spal-back{opacity:1;-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px)}
+.spal-box{position:relative;width:min(640px,100%);display:flex;flex-direction:column;overflow:hidden;background:var(--card);border:1px solid var(--ink);border-radius:4px;box-shadow:0 24px 64px rgba(0,0,0,.2);opacity:0;filter:blur(8px);transform:translateY(-8px) scale(.985);transition:opacity .22s ease,filter .22s ease,transform .26s cubic-bezier(.2,.7,.2,1)}
+[data-theme="dark"] .spal-box{box-shadow:0 24px 64px rgba(0,0,0,.7)}
+.spal.open .spal-box{opacity:1;filter:none;transform:none}
+.spal-in{display:flex;align-items:center;gap:12px;height:60px;padding:0 14px 0 18px;border-bottom:1px solid var(--line);color:var(--mute)}
+.spal-in>svg{width:18px;height:18px;flex:none}
+.spal-in input{flex:1;min-width:0;height:100%;font:500 1.05rem var(--font);color:var(--ink);background:none;border:0;outline:0;padding:0;-webkit-appearance:none;appearance:none}
+.spal-in input::placeholder{color:var(--mute)}
+.spal-in input::-webkit-search-cancel-button{display:none}
+.spal-x{font:600 .72rem var(--font);color:var(--mute);background:none;border:1px solid var(--line);border-bottom-width:2px;border-radius:3px;padding:3px 8px;cursor:pointer}
+.spal-x:hover{color:var(--ink);border-color:var(--ink)}
+.spal-x .t{display:none}
+.sres{overflow:auto;padding:6px;overscroll-behavior:contain;max-height:min(56vh,420px);max-height:min(50dvh,420px)}
+.sres a{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:baseline;gap:3px 16px;padding:11px 12px;border-radius:2px;color:var(--ink);cursor:pointer;box-shadow:inset 2px 0 0 transparent}
+.sres a.kb{background:var(--bg);box-shadow:inset 2px 0 0 var(--ink)}
+[data-theme="dark"] .sres a.kb{background:#17181a}
+.sres a strong{font-size:.92rem;font-weight:600;min-width:0}
+.sres a small{font-size:.76rem;font-weight:500;color:var(--mute);white-space:nowrap}
+.sres a span{grid-column:1/-1;font-size:.82rem;color:var(--mute);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.sres mark{background:none;color:var(--ink);font-weight:700}
+.sres .shead{font-size:.76rem;font-weight:600;color:var(--mute);padding:8px 12px 6px}
+.sres .hint{font-size:.8rem;color:var(--mute);padding:6px 12px 8px}
+.sres .hint b{color:var(--ink);font-weight:600}
+.sres .empty{padding:22px 14px;font-size:.9rem;color:var(--mute);line-height:1.7}
+.sres .empty button{font:inherit;font-weight:600;color:var(--ink);text-decoration:underline;text-underline-offset:3px;background:none;border:0;padding:0;cursor:pointer}
+@media(max-width:560px){.sres a{grid-template-columns:minmax(0,1fr)}.sres a small{order:-1;white-space:normal}}
+.spal-foot{display:flex;align-items:center;gap:18px;padding:10px 16px;border-top:1px solid var(--line);font-size:.78rem;color:var(--mute)}
+.spal-foot kbd{font:600 .7rem var(--font);border:1px solid var(--line);border-bottom-width:2px;border-radius:3px;padding:1px 6px;margin-right:4px;background:var(--bg);color:var(--ink)}
+.spal-foot #scount{margin-left:auto}
+@media(pointer:coarse){.spal-foot span:not(#scount){display:none}.spal-x .k{display:none}.spal-x .t{display:inline}#wiki .sk{display:none}}
+
+/* page transitions: blur + fade */
+@keyframes blurin{from{opacity:0;filter:blur(12px)}to{opacity:1;filter:none}}
+#wiki.enter .side{animation:blurin .5s cubic-bezier(.2,.7,.2,1) backwards}
+#wiki .pn>a{animation:blurin .45s cubic-bezier(.2,.7,.2,1) backwards}
+body.henter>header,body.henter>section,body.henter>main:not(#wiki),body.henter>footer{animation:blurin .55s cubic-bezier(.2,.7,.2,1) backwards}
+#wiki .page.show.leaving{animation:out .16s ease both}
+#panel.swap>*{animation:blurin .38s cubic-bezier(.2,.7,.2,1) backwards}
+@media(prefers-reduced-motion:reduce){#wiki .side,#wiki .pn>a,body.henter>*,#panel.swap>*{animation:none!important}.spal-box,.spal-back{transition:none!important}}
+.egg{position:fixed;inset:0;z-index:130;display:flex;align-items:center;justify-content:center;padding:20px}
+.egg[hidden]{display:none}
+.egg-back{position:absolute;inset:0;background:rgba(245,245,243,.6);opacity:0;-webkit-backdrop-filter:blur(0);backdrop-filter:blur(0);transition:opacity .28s ease,backdrop-filter .28s ease,-webkit-backdrop-filter .28s ease}
+[data-theme="dark"] .egg-back{background:rgba(0,0,0,.65)}
+.egg.open .egg-back{opacity:1;-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px)}
+.egg-box{position:relative;width:min(960px,100%,calc((100vh - 140px)*1.579));width:min(960px,100%,calc((100dvh - 140px)*1.579));outline:0;opacity:0;filter:blur(12px);transform:translateY(10px) scale(.97);transition:opacity .28s ease,filter .28s ease,transform .32s cubic-bezier(.2,.7,.2,1)}
+.egg.open .egg-box{opacity:1;filter:none;transform:none}
+.egg-frame{position:relative;border:2px solid var(--banner-outline);border-radius:4px;line-height:0;background:var(--card)}
+.egg-frame img{display:block;width:100%;height:auto;border-radius:2px}
+.egg-bar{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-top:14px}
+.egg-bar p{margin:0;max-width:none;font-weight:700;font-size:.95rem;color:var(--ink)}
+.egg-x{font:600 .85rem var(--font);color:var(--ink);background:var(--card);border:1px solid var(--line);border-radius:2px;padding:8px 16px;cursor:pointer;transition:border-color .2s}
+.egg-x:hover{border-color:var(--ink)}
+.hero .logo{touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+footer .copyright p.egghint{margin-top:12px;font-size:.82rem}
+footer .brand img{touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-user-select:none;user-select:none}
+.eggtip{position:fixed;left:50%;bottom:calc(env(safe-area-inset-bottom,0px) + 28px);z-index:125;translate:-50% 0;padding:10px 18px;border-radius:2px;background:var(--ink);color:var(--bg);font-size:.85rem;font-weight:600;line-height:1.3;white-space:nowrap;pointer-events:none;opacity:0;filter:blur(6px);transform:translateY(8px);transition:opacity .25s ease,filter .25s ease,transform .3s cubic-bezier(.2,.7,.2,1)}
+.eggtip.on{opacity:1;filter:none;transform:none}
+.egg-bar p{display:flex;align-items:center;gap:8px}
+.egg-bar .heart{width:16px;height:16px;flex:none}
+#wiki .side :focus-visible{outline:2px solid var(--ink);outline-offset:-2px}
+#wiki .sopen:focus-visible{outline-offset:-3px}
+.egg-cap small{display:block;margin-top:4px;font-size:.78rem;font-weight:500;color:var(--mute)}
+.egg-hot{position:absolute;top:0;bottom:0;margin:0;padding:0;border:0;background:none;cursor:default;-webkit-tap-highlight-color:transparent}
+.egg-hot:focus-visible{outline:2px solid var(--ink);outline-offset:-4px}
+.egg-tip{position:absolute;z-index:3;display:block;padding:7px 12px;border-radius:3px;background:var(--ink);color:var(--bg);line-height:1;white-space:nowrap;text-align:center;pointer-events:none;opacity:0;filter:blur(6px);transform:translate(-50%,calc(-100% + 4px)) scale(.96);transform-origin:50% 100%;transition:opacity .2s ease,filter .2s ease,transform .26s cubic-bezier(.2,.7,.2,1);margin-left:0}
+.egg-tip{left:var(--tx,50%)}
+.egg-tip i{font-style:normal;font-size:.68rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase}
+.egg-tip::after{content:"";position:absolute;left:var(--tail,50%);bottom:-3px;width:7px;height:7px;background:var(--ink);transform:translateX(-50%) rotate(45deg);border-radius:0 0 2px 0}
+.egg-hot.on+.egg-tip,.egg-hot:focus-visible+.egg-tip{opacity:1;filter:none;transform:translate(-50%,-100%)}
+@media(hover:hover){.egg-hot:hover+.egg-tip{opacity:1;filter:none;transform:translate(-50%,-100%)}}
+.egg:has(.egg-hot:hover,.egg-hot:focus-visible) .egg-hot.on:not(:hover):not(:focus-visible)+.egg-tip{opacity:0;filter:blur(6px);transform:translate(-50%,calc(-100% + 4px)) scale(.96)}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+ <a class="brand" href="#top"><img src="assets/img-c5971780.png" alt="">Vought Project</a>
+ <ul><li><a href="#about">About</a></li><li><a href="#devices">Devices</a></li><li><a href="#features">Features</a></li><li><a href="#faq">FAQ</a></li><li class="wiki-nav"><a href="#wiki" data-wiki="overview">Wiki</a></li></ul>
+</div></nav>
+
+<header class="hero" id="top"><div class="wrap">
+ <div class="top">
+  <div class="intro"><h1 id="ttl" aria-label="Vought Project"><span id="tw" aria-hidden="true">VOUGHT
+PROJECT.</span><span class="bar" aria-hidden="true"></span></h1><p class="tag">Making your device <strong>Stronger, Smarter & Better.</strong></p><div class="cta"><a class="btn solid" href="#devices">Choose your device</a><a class="btn ghost" href="#wiki" data-wiki="overview">Read the wiki</a></div></div>
+  <img class="logo" src="assets/img-c5971780.png" alt="Vought Project logo">
+ </div>
+</div></header>
+<section class="sec wrap" id="about">
+  <h2>About us</h2>
+  <div>
+   <p style="font-size:1.2rem;color:var(--ink);font-weight:500">Vought Project started with one developer and one phone: the Galaxy A51.</p>
+   <p>At the time, the A51 community was being written off by the biggest One UI porters, who saw the phone as not worth the effort. One developer disagreed and set out to bring the latest One UI to it anyway.</p>
+   <p>That was a year and a half ago. Today Vought Project runs on the A51, A12 and A35, backed by a team and a wiki that walks you through every install. The idea hasn&rsquo;t changed since day one: an older Samsung still deserves the latest One UI update.</p>
+   <div class="team-cta">
+    <p class="team-lab">The team</p>
+    <p>Vought Project is created and maintained by a small group of developers, testers and designers. Plenty of others help along the way, including kernel providers, testers and bug reporters, and we appreciate their help!</p>
+    <button type="button" class="btn ghost" id="teamBtn" data-team>Meet the core team</button>
+   </div>
+  </div>
+ </section>
+<section class="wrap devsec" id="devices"><h2>Pick your device.</h2>
+  <div class="pick" role="group" aria-label="Choose your device">
+   <button class="dev" data-d="a51" aria-pressed="true"><strong>A515F</strong><span>Samsung A51 (4G)</span></button>
+   <button class="dev" data-d="a12f" aria-pressed="false"><strong>A127X</strong><span>Samsung A12</span></button>
+   <button class="dev" data-d="a35" aria-pressed="false"><strong>A356E</strong><span>Samsung A35</span></button>
+   <div class="legwrap" id="legwrap"><button type="button" class="legtoggle" id="legtoggle" aria-expanded="false" aria-label="Show legacy editions" title="Legacy editions"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button><button class="dev legacy" id="legbtn" data-d="legacy" aria-pressed="false"><strong>Legacy</strong><span>EOL editions</span></button></div>
+  </div>
+  <div class="panel" id="panel" aria-live="polite"></div>
+</section>
+
+<main>
+
+
+ <section id="features">
+  <div class="feats">
+   <div class="fx b1"><div class="wrap fxin"><div class="ftext"><h3><span class="lt">COLD AS ICE</span>Smarter Galaxy AI</h3><p>Galaxy AI makes CRYSTAL Edition a delight to use. With call translation, writing assist, and note summaries, your phone feels smarter than ever.</p><p>And of course, with Outdoor Mode and Extra Brightness, your screen stays clear in direct sunlight, while Battery Health lets you keep an eye on your battery and <span style="white-space:nowrap">high-end</span> animations keep every swipe smooth.</p></div><div class="fimg"><img src="assets/img-2cddc802.png" alt="Galaxy AI" loading="lazy"></div></div></div>
+   <div class="fx b2"><div class="wrap fxin"><div class="ftext"><h3><span class="lt">COLD AS ICE</span>The Newest One UI</h3><p>The newest One UI brings a fresh new look to CRYBON Edition. With a new AOD clock animation, Samsung Messages in place of Google’s, and Galaxy AI, your phone feels more alive than ever.</p><p>And with the camera modes, you can shoot in Macro, Night, and Food, or record Pro Video at FHD 120 FPS and UHD 60 FPS. Add NFC, VoLTE, and <span style="white-space:nowrap">in-display</span> fingerprint support for everyday convenience.</p></div><div class="fimg"><img src="assets/img-12ffb660.png" alt="Control panel" loading="lazy"></div></div></div>
+   <div class="fx b3"><div class="wrap fxin"><div class="ftext"><h3><span class="lt">COLD AS ICE</span>Smooth One UI 8.5</h3><p>STANDARD Edition is all about a clean, familiar experience. With <span style="white-space:nowrap">high-end</span> animations, a fully working camera, and a native Secure Folder, your phone feels smooth, stable, and polished every day.</p><p>And of course, Outdoor Mode and Extra Brightness keep your screen readable in sunlight, and Battery Health lets you keep an eye on your battery, with no fuss.</p></div><div class="fimg"><img src="assets/img-1a47ac94.png" alt="Feature" loading="lazy"></div></div></div>
+  </div>
+ </section>
+
+ <section class="sec wrap" id="faq">
+  <h2>Frequently asked questions</h2>
+  <div>
+   <details><summary>Will installing the ROM erase my data?</summary><p>Yes. A clean flash is required on all three devices, and formatting data erases your apps, photos, messages and settings. Unlocking the bootloader also wipes the phone. Back up anything you want to keep before starting.</p></details>
+   <details><summary>Do I need an unlocked bootloader and custom recovery?</summary><p>Yes. Unlock the bootloader before installing a custom recovery. The A51 uses TWRP, the A12 uses OrangeFox or TWRP, and the A35 uses TWRP with the Fastboot installer. Follow the guide for your exact device rather than mixing steps between phones.</p></details>
+   <details><summary>Why must I flash patched vbmeta before the recovery?</summary><p>Android Verified Boot (AVB) can prevent a custom recovery from booting. Flash the patched vbmeta for your device before TWRP or OrangeFox, as explained in the wiki. Skipping this step can cause an AVB verification failure. The A12 guide already includes its vbmeta download link.</p></details>
+   <details><summary>Can I install Vought Project over another custom ROM?</summary><p>The current guides require a clean flash starting from stock firmware, not a dirty flash over another ROM. Follow your device guide for the required firmware and installation order. On the A35, the STANDARD Edition requires One UI 8 with the October 2025 security patch, and the CRYBON Edition requires One UI 8.5 with the May 2026 security patch.</p></details>
+   <details><summary>Is a longer first boot normal?</summary><p>The first boot after installation can take longer than usual. Let it finish without interrupting it. If the phone reports an AVB error or repeatedly restarts, check the patched vbmeta step and your device-specific instructions instead of assuming it is still completing the first boot.</p></details>
+   <details><summary>What does Legacy or End of life mean?</summary><p>Legacy editions are no longer maintained. They are listed separately from the current editions. Check that an edition is available for your exact device before using its installation guide.</p></details>
+  </div>
+ </section>
+</main>
+
+<footer><div class="wrap">
+ <div><div class="brand"><img src="assets/img-c5971780.png" alt="">Vought Project</div><div class="copyright"><p>© 2026 Vought Project. All rights reserved.</p><p>© 2025 – 2026 TheBlackWereWolf. All rights reserved.</p></div></div>
+ <ul><li><a href="#wiki" data-wiki="overview">Wiki</a></li><li><a href="#" id="discordLink">Discord</a></li></ul>
+</div></footer>
+
+<script>
+var BAN_A51_CRYBON="assets/img-5de8c38f.webp";
+var BAN_A51_CRYSTAL="assets/img-4c14bd5a.webp";
+var BAN12="assets/img-9eff23f4.webp";
+var BAN_A12_CRYSTAL="assets/img-b43da455.webp";var BAN35="assets/img-4dfe1739.webp";
+var BAN_A35_CRYBON="assets/img-b09e6d62.webp";var BAN="assets/img-4c62db8a.webp";
+var D={
+ a51:{name:"A51",eds:[["STANDARD","One UI 8.5","3.0.0",false],["CRYSTAL","One UI 8.5","2.0.0",true],["CRYBON","One UI 9.0","3.0.0",true]],legacy:[["VANILLA","One UI x.x"],["UN1CA","One UI x.x"],["CUPID","One UI x.x"]]},
+ a12f:{name:"A12F",eds:[["STANDARD","One UI 8.5","3.0.0",false],["CRYSTAL","One UI 8.5","2.0.0",true]]},
+ a35:{name:"A35",eds:[["STANDARD","One UI 8.5","3.0.0",true],["CRYBON","One UI 9.0","1.0.0",true]]}
+};
+function esc(s){return s.replace(/[&<>"]/g,function(c){return {"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+var curK='a51',legMode=false,lastDev='a51';
+function show(k,leg){
+ curK=k;legMode=!!leg;if(k!=='legacy')lastDev=k;var lw=document.getElementById('legwrap');if(lw)lw.classList.toggle('on',k==='legacy');
+ var isL=(k==='legacy'),d=isL?{name:'Legacy editions',eds:[]}:D[k],h='<h2>'+esc(d.name)+'</h2><p>'+(isL?'These editions are no longer maintained.':'Go through the versions and download the one you like best.')+'</p>';
+ function row(e,n,lg,dk){dk=dk||k;var id='inf-'+dk+'-'+n+(lg?'l':''),ai=(e[3]===true?'Galaxy AI included':(e[3]===false?'Galaxy AI not included':''));return '<div class="ed'+(lg?' old':'')+'"><div><h3>'+esc(e[0])+'</h3><div class="ver">'+(lg?'End of life':'Version '+(e[2]||'0.0.0'))+'</div></div><div class="act"><div class="inf-wrap"><div class="inf-panel" id="'+id+'" aria-hidden="true"><span class="inf-in"><b>'+esc(e[1])+'</b>'+(ai?'<i></i><span>'+ai+'</span>':'')+'</span></div><button type="button" class="btn inf" aria-expanded="false" aria-controls="'+id+'" aria-label="Show details"><span>Info</span><svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg></button></div><a class="btn solid" href="#" data-open data-dev="'+dk+'" data-ed="'+n+'"'+(lg?' data-leg="1"':'')+'>Download</a></div></div>'}
+ if(!isL&&!d.eds.length)h+='<div class="ed"><p>No editions yet.</p></div>';
+ d.eds.forEach(function(e,n){h+=row(e,n,false)});
+ if(isL){h+='<div class="soon"><div class="soon-t"><span>COMING</span> SOON</div><p>The legacy editions will be added here later.</p></div>'}
+    if(!isL)h+='<p class="note">A clean flash from stock firmware is required. <a href="#wiki" data-wiki="'+(k==='a12f'?'a12':k==='legacy'?'overview':k)+'">Read the install guide</a></p>';
+ var pnl=document.getElementById('panel'),h0=pnl.getBoundingClientRect().height;if(pnl._ha){pnl._ha.cancel();pnl._ha=null}
+  pnl.innerHTML=h;
+  var h1=pnl.getBoundingClientRect().height;
+  if(pnl.dataset.rdy&&h0>0&&Math.abs(h0-h1)>1&&!window.matchMedia('(prefers-reduced-motion: reduce)').matches&&pnl.animate){pnl.style.overflow='hidden';var ha=pnl.animate([{height:h0+'px'},{height:h1+'px'}],{duration:480,easing:'cubic-bezier(.3,.7,.2,1)'});pnl._ha=ha;ha.onfinish=ha.oncancel=function(){pnl.style.overflow='';if(pnl._ha===ha)pnl._ha=null}}
+  pnl.dataset.rdy='1';
+ document.querySelectorAll('.dev').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.d===k?'true':'false')});
+}
+document.querySelectorAll('.dev').forEach(function(b){b.addEventListener('click',function(){document.getElementById('panel').classList.add('swap');show(b.dataset.d)})});
+show('a51');
+(function(){var lw=document.getElementById('legwrap'),lt=document.getElementById('legtoggle');lt.addEventListener('click',function(){var op=!lw.classList.contains('open');lw.classList.toggle('open',op);lt.setAttribute('aria-expanded',op?'true':'false');lt.setAttribute('aria-label',op?'Hide legacy editions':'Show legacy editions');if(!op&&curK==='legacy')show(lastDev)})})();
+
+</script>
+<main id="wiki" aria-label="Installation wiki"><button class="btn ghost wiki-menu" id="menubtn" aria-expanded="false" aria-controls="side">Menu</button><button class="btn ghost wiki-menu" id="msearch" type="button" aria-haspopup="dialog">Search</button><div class="layout">
+<aside class="side" id="side">
+<a class="wiki-back" href="#top" data-wiki="home"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to home</a>
+<div class="search"><button type="button" class="sopen" id="sopen" aria-haspopup="dialog" aria-keyshortcuts="Control+K Meta+K"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><span>Search the wiki</span><span class="sk" id="skey">Ctrl K</span></button></div>
+<div id="nav">
+<div class="sgrp">Get started</div>
+<a class="pl" data-p="welcome" href="#welcome">Welcome</a>
+<a class="pl" data-p="before-you-start" href="#before-you-start">Before you start</a>
+<div class="sgrp">Preparation</div>
+<a class="pl" data-p="download-mode" href="#download-mode">Button combinations</a>
+<a class="pl" data-p="unlock-bootloader" href="#unlock-bootloader">Unlocking the bootloader</a>
+<a class="pl" data-p="custom-recovery" href="#custom-recovery">Installing a custom recovery</a>
+<div class="sgrp">Installing Vought Project</div>
+<a class="pl" data-p="install-a51" href="#install-a51">Galaxy A51 (A515F)</a>
+<a class="pl" data-p="install-a12" href="#install-a12">Galaxy A12 (A127X)</a>
+<a class="pl" data-p="install-a35" href="#install-a35">Galaxy A35 (A356E)</a>
+<div class="sgrp">Extras</div>
+<a class="pl" data-p="modules" href="#modules">Modules</a>
+</div>
+
+</aside>
+<div class="doc"><div id="wiki-pages"></div>
+<!-- WELCOME -->
+
+<!-- BEFORE YOU START -->
+
+<!-- BUTTON COMBINATIONS -->
+
+<!-- UNLOCK BOOTLOADER -->
+
+<!-- CUSTOM RECOVERY -->
+
+<!-- A51 -->
+
+<!-- A12 -->
+
+<!-- A35 -->
+
+<div class="pn" id="pn"></div>
+</div>
+</div></main>
+<div id="detail"></div>
+<div id="wipe" aria-hidden="true"></div>
+<div id="eggtip" class="eggtip" role="status" aria-live="polite"></div>
+<div id="egg" class="egg" hidden aria-hidden="true"><div class="egg-back"></div><div class="egg-box" role="dialog" aria-modal="true" aria-label="The Vought Project team" tabindex="-1"><div class="egg-frame"><img src="assets/img-890cc1a5.webp" alt="The Vought Project team, left to right: @Freddel15, @X3bsadek, @Xv2ice, @TheWereWolf9512, @Daidoza and @KultrinhaaKKKK" width="1658" height="1050"><button type="button" class="egg-hot" style="left:0%;width:18.1%" aria-label="Freddle, Co-Developer"></button><span class="egg-tip" style="--tx:11.5%;top:22.3%" aria-hidden="true"><i>Co-Developer</i></span><button type="button" class="egg-hot" style="left:18.1%;width:11.5%" aria-label="X3Bsadek, A356E Maintainer"></button><span class="egg-tip" style="--tx:27.2%;top:17%" aria-hidden="true"><i>A356E Maintainer</i></span><button type="button" class="egg-hot" style="left:29.6%;width:24.1%" aria-label="Xv2ice, Owner/Creator"></button><span class="egg-tip" style="--tx:43.5%;top:14.1%" aria-hidden="true"><i>Owner &amp; Creator</i></span><button type="button" class="egg-hot" style="left:53.7%;width:15.1%" aria-label="TheWereWolf9512, AF/Marketing"></button><span class="egg-tip" style="--tx:61.3%;top:17.7%" aria-hidden="true"><i>AF/Marketing</i></span><button type="button" class="egg-hot" style="left:68.8%;width:14.5%" aria-label="Daidoza, A127X Maintainer"></button><span class="egg-tip" style="--tx:74%;top:21.6%" aria-hidden="true"><i>A127X Maintainer</i></span><button type="button" class="egg-hot" style="left:83.2%;width:16.8%" aria-label="Kultrinhaa, Banner Designer"></button><span class="egg-tip" style="--tx:90.4%;top:21.3%" aria-hidden="true"><i>Banner Designer</i></span></div><div class="egg-bar"><div class="egg-cap"><p><svg class="heart" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" fill="currentColor"/></svg>From all of us at Vought Project!</p></div><button type="button" class="egg-x">Close</button></div></div></div>
+<div id="spal" class="spal" aria-hidden="true">
+ <div class="spal-back"></div>
+ <div class="spal-box" role="dialog" aria-modal="true" aria-label="Search the wiki">
+  <div class="spal-in">
+   <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><path d="M20 20l-4-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+   <input id="q" type="search" role="combobox" aria-expanded="false" aria-controls="sres" aria-autocomplete="list" autocomplete="off" autocapitalize="off" spellcheck="false" enterkeyhint="go" placeholder="Search the wiki" aria-label="Search the wiki">
+   <button type="button" class="spal-x" tabindex="-1" aria-label="Close search"><span class="k">Esc</span><span class="t">Close</span></button>
+  </div>
+  <div class="sres" id="sres" role="listbox" aria-label="Search results"></div>
+  <div class="spal-foot"><span id="scount" aria-live="polite"></span></div>
+ </div>
+</div>
+<button id="fab" class="fab" type="button" aria-label="Switch to dark mode">
+ <svg class="i-theme" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+ <svg class="i-up" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+</button>
+<script>
+(function(){
+ var root=document.documentElement,fab=document.getElementById('fab'),wipe=document.getElementById('wipe'),busy=false;
+ var BG={light:'#f5f5f3',dark:'#000'};
+ var FAV={light:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAFgElEQVR4nM2XXWxU1RbHf2ufc2ZKpDpDJ/0kfVCrVbmJuZBbKCgaFD8iiQhBQ1UEQq42PEATA9NGhumXrUWEoq0mBhNz4zWNkRIMoICVtjfCC8FEy1TeKralQcoNH2V6ztnbB5iKWHAIAv6T87Sz9/+/1l7/tc8SQGKxmMTjcd3dve9pUKtc1y0xxmQaYwCE64MREUTktOM4B0FvmjVrzs5YLKbi8biRtrY2a9GiRf433+xpCQYDr7muy6W8cp30F84CMIiA4zgkk6OtjzzyeHlbW5slAHv3ftmSlRV67dSp/+v8/Mnk5OQopSyMMX+JABFBa5/jx4/r/v5jhEJ3qF9+OdX62GNPlEtHx54nMzKCu0ZHk15x8RQrHJ4knudeH+sVYNsOw8MnTSLxvR8IBO3z55NP2WBed91Rk5c3WcLhSZJMnkcpdUMEJJPnCYcnSV7eZBkc/NmAeV1p7ZeASHZ2tuV57g0jB1BK4Xku2dnZFoho7ZcoEXVbavFmIcUlom5TxvxWpzcbxhhjM47Ps7PzyM3NpaCgAK19bNvh0KFDbN78Dr29P7Jly7vMnFmK1vqiUyR1IACu62HMhTWlLPr7f2ZgYJChoYHLqcQeT1lZ2WK6urr54ovtGGOwbZumpg1UV9fS3v45LS2tvPDC88ye/TC+r7Ft6yKZQkQIhUI4joPWGhGhtHQWCxcuGDcLsm/fbuM4Dg8++E9s28EYw5kzZ7jvvilEo2spL38V3/fxfU1R0b1UVUUZHR1l8+ZmQqEw586dw/d9LMvC8zxEhO7u/WRlZSEifPzxf1izZi09Pd8TDocQETzP5fDhQ7iuy7gZmDhxIlVVldTW1vLyyy+SkZFBIOBQXR0nGq0kkfiBsrLFaK1JJkdJuWfOnLnMm/cMkUgEz/PQWlNdXUNFxWrC4dC4GRi39LXWLF++lMzM22lq2oBt23iex0svlRGJRKivbyAcDpOVlUV+fh6FhYV0dnZx9uwZqqoq0Vpj2zbvv/8BnuexcmU5WutrE+A4DnV1NbS2fsDg4CAiglKKuroatm79iP7+AbTW+L7PyMgI0WgVq1evJhS6A2MMp0+f5q23NlBZuZYJEyZcmwDbttFa89xz87nnniLWrVs/dsfz5j1DUdHdxOPVKKWwLIvm5i0EAg4rV5bjeR6WZbFx4yYyMzNZtmwpWmssy0pfAPxmqcbGBtrbt5NIJFBKYYyhoeFNtm1rp7f3R0ZGRti4cROx2DqCwSAiwokTJ3jvvRZqauLYtv07q6YtwLIsfN9n5sxSSktnsGZNFKUUWmumTy/Bsix6e3t5++13yM3Noaxs8Vj0tbX1FBYWsnDhgqtGf1UBl2aisfFNvv32AJ2dnViWRWNjE5FIhClTHqC5eQuNjQ1jNdLX18cnn/yX+vra32XyShi3D1yKlMdXrPg3iUQv27Z9xv33/4OtWz9kz569HD78Hfv3f43nedi2zZIlS+nr+4mOjr1orf/wxqTVBy7fYIxh/foYs2c/yoIFi5g6dSp33XUny5Z9ys6dO8a6YE9PD7t27WbHju1pRQ9pXEHq3gsK8lmxYjlHjhyhrq6aN95Yz0MPzWLatGn4vo9Simi0ihkzplNS8q+xzP0Z/jQDKRHGGF55ZQmOE2B4+BSdnZ0cOPC/sabT1dV9sU460or8mgSkLJSTk0NFxSrmzn2SYDDIqlUVJJNJHMfh6NGjzJ//LMXFxWlHn7aAy/HVV7uvup4uOVyogVv2QwIYJVdqUTcBIiLKGH0WuOJjcSOQ4jJGn1VKWQfBmKGhId+2nRsq5IJjHIaGhnwwRinroAJpcpyADAwcM8PDJ00wmMHFWe4v/4LBDIaHT5qBgWPGcQIC0nTrR7O/w3B6S8fzXwF33cwgoVx8FgAAAABJRU5ErkJggg==',dark:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADnUlEQVR4nM2XTyisfRTHz+/3GDRvQ8i/MZNmIcWwlbKQLK6bbLBQSk1iKSksiGyUsrtdG2wssLJ/pZDSZSOJLFiIoZnRuGVCM3zehWeezHX/zH1fr7mnTj2d3/P7fr/nnN/z54iIKBHR8mwfReRvEfkqIk+m8x89jvPVxP5ocmmTWwwz8PkNyJL1zyZnnNsifzT9/yJ+iR8XIR/MQPSNSp5MS6Lm9QcRkTUzGHvHFsRMzjUlIrci8pekxiLKVJQy0ykWwHcrAIjf75ezszMxDEOi0ajU1NSIz+eTiooKGRoakvX1ddFai1JK4BlCKSUiIjabzVp7fHwUt9stJSUl1vorvm99dnaW09NTDMMgLS0NEWF8fJzLy0vKy8uJxWJ0dXXhdDpxu90UFxfjdDopKiqisLAQm82GiKC1RinF8fExCwsLPzqQr4MOh4O7uzsGBgYQEQzDID09nUgkQl9fH4ODg4TDYU5OTri6uiIYDHJ1dUUoFCIYDFJQUIBSChGhp6eHWCxGbm5u8gJEhP7+fh4eHnA4HFYVent7iUajZGdnk5eXR35+Pi6XC4/HQ2lpKaFQiJmZGUSEtLQ0MjIyuLm5YWxs7GeP5Oug1hqbzUYgEGB6etoC1FpzcXHBp0+fXu3x+Xw8PDyQk5OD1hoRYXh4mNvbW+x2uxVLSkA8446ODgCcTieGYSAitLW1AeByudBaYxgGdrudSCTC6Oio1bKsrCzu7+/p6+tLwEy6BXHFh4eHLC0tJYAcHR2xuLho3TsxMUE4HCYzM9O6Z2pqikAgYFUufiaSFhDPuL6+HgCv12sBNTQ0AFBRUYHdbufp6Ynu7m5rX0FBAQCdnZ0JWL8l4OXG9fV1NjY2rJjNZiMWi9He3s7k5CTn5+copazs5+bmOD09TajkvxaglKKyshKAxsZGRITJyUn8fj9lZWUAtLS0WGQejweA5ubmZLL/uYCXAMvLyxwcHFjlbW1tZX5+nv39/YTzsbKywt7eXrLZ/1pAvO9ut5ubmxv29/fZ3t6mqqoKgNraWpRSaK2prq4GoK6uLtnsfy3gJdDExAQANTU1rK6usra2lpD9xsZGwllJBjspAUoplFIUFxczMjJCU1MTAGVlZVaZ40+G1+tFKfW2Ar713d1d7u7u2NzcZGdnh62tLa6vr613w2+Qf/9z/J72Z/6QvKdpEYmkkD+iReSLPFfh8R2J48PJF5E/YDARSfFolvLhNKXj+T90BeFda05uZwAAAABJRU5ErkJggg=='};function setIcon(x){var l=document.getElementById('favicon');if(l&&FAV[x])l.href=FAV[x]}
+ function cur(){return root.getAttribute('data-theme')==='dark'?'dark':'light'}
+ function atTop(){return window.scrollY<=20}
+ function label(){var up=!atTop();fab.classList.toggle('up',up);fab.setAttribute('aria-label',up?'Back to top':(cur()==='dark'?'Switch to light mode':'Switch to dark mode'))}
+ function setTheme(t){root.setAttribute('data-theme',t);setIcon(t);label()}
+ 
+ var det=document.getElementById('detail'),body=document.body,savedY=0,anim=false;
+ function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+ var WH_URL='https://github.com/xv2ice/WinterHide/releases/tag/v1.0.0';
+ var COMMON_NOTES=['No one is allowed to use this base without permission.','If TWRP shows a system_root error, ignore it.','A clean flash is required.','The system partition is read-only.','The ROM needs time to settle after the first boot.'];
+ var CREDITS='<p class="cr"><strong>XV2ICE</strong> is the owner and main developer of Vought Project.</p><p class="cr"><strong>Thank you to everyone</strong> who helped bring it to life: kernel development, patches and bug fixes, testing and bug reports, marketing, banner and graphic design, and everyone who shared feedback and support along the way.</p>';
+ var EI={
+  'a51|STANDARD':{
+   spec:[['Release','Version 3.0 Stable'],['Base','A356E (One UI 8.5)'],['Kernel','Long Kernel, KSU fork'],['Supported device','Galaxy A51 4G'],['Known issues','None']],
+   url:'https://pixeldrain.com/u/3unDRbBh',
+   features:['No Galaxy AI','Outdoor Mode','Extra Brightness','High-end animations','Fully working camera','Native Secure Folder','Battery Health'],
+   log:[['Fixed',['SSRM','Hyperlapse UHD']],['Added',['Outdoor Mode','DeX','Battery Health info','AppLock','New CF.xml','Extra Brightness']],['Patched',['Knox','Compatibility']],['Miscellaneous',['Removed old SecSettings patches','Removed CIDManager to disable the update popup','Screenshot detection prevention','ROM info shown in the build number']]],
+   notes:COMMON_NOTES.concat(['If you have problems with Portrait mode, spoof the device to A51 using the {WH}.'])
+  },
+  'a51|CRYSTAL':{
+   spec:[['Release','Version 2.0 Stable'],['Base','Galaxy S23 FE (One UI 8.5)'],['Kernel','Long Kernel, KSU fork'],['Supported device','Galaxy A51 4G'],['Known issues','None']],
+   url:'https://pixeldrain.com/u/C65eLT64',
+   features:['Galaxy AI','Outdoor Mode','Extra Brightness','Secure Folder and Samsung Health','IceReborn pre-installed','Fully working camera'],
+   log:[['Fixed',['KSU fork APK','Audio']],['Added',['S23 Ultra wallpapers','Battery Health','Outdoor Mode','Extra Brightness','DeX','HomeUp, LockStar and FineLock APKs']],['Patched',['Knox','Compatibility']],['Miscellaneous',['Modern Android splash screen','ROM info shown in the build number','Screenshot detection prevention']]],
+   notes:COMMON_NOTES.concat(['If you have problems with Portrait mode, spoof the device to A51 using the {WH}.'])
+  },
+  'a51|CRYBON':{
+   spec:[['Release','Version 3.0 Stable'],['Base','Galaxy A57 5G (One UI 9.0)'],['Kernel','Long Kernel, KSU fork'],['Supported device','Galaxy A51 4G'],['IceReborn','Version 1.0'],['Known issues','None']],
+   url:'https://pixeldrain.com/u/u5iXnWP3',
+   features:['Galaxy AI','Outdoor Mode','Private Album','Extra Brightness','Secure Folder and Samsung Health','IceReborn pre-installed','Fully working camera'],
+   log:[['Fixed',['Lockscreen delay','Private Album','NFC tab crash']],['Added',['Forced MTP']],['Patched',['Gallery','SystemUI','SecSettings']],['Miscellaneous',['Reduced lockscreen lag','Reverse-engineered the FBE path','Disabled some text marquee in Quick Settings labels','Improved Quick Settings response by 5\u20138%']]],
+   notes:['No one is allowed to use this base without permission.','Not recommended for devices with 4 GB of RAM.','If TWRP shows a system_root error, ignore it.','A clean flash is required.','The system partition is read-only.','The ROM needs time to settle after the first boot.','If you use a screen protector, enable \u201cIncrease touch sensitivity\u201d in Settings before adding a fingerprint (FOD).','Galaxy AI is active in this base. On devices with 4 GB or 6 GB of RAM, turning it off with the {WH} is recommended.']
+  },
+   'a12f|STANDARD':{
+    spec:[['Release','Version 3.0 Stable'],['Base','A356E (One UI 8.5)'],['Kernel','MaowzzaKernel V2'],['Supported device','Galaxy A127X'],['Known issues','None']],
+    url:'https://pixeldrain.com/u/XKWEH755',
+    features:['Outdoor Mode','Extra Brightness','High-end animations','Fully working camera','Native Secure Folder','Battery Health','And much more'],
+    log:'Everything is working. There are no known errors.',
+    notes:['No one is allowed to use this base without permission.','If you want KSU, use the Hirayuuki kernel. A hotspot error is present with that kernel.','If TWRP shows a system_root error, ignore it.','A clean flash is required.','The system partition is read-only.','The ROM needs time to settle after the first boot.']
+   },
+   'a12f|CRYSTAL':{
+    spec:[['Release','Version 2.0 Stable'],['Base','Galaxy S23 FE (One UI 8.5)'],['Kernel','MaowzzaKernel V2'],['Supported device','Galaxy A127X'],['Known issues','None']],
+    url:'https://pixeldrain.com/u/qsrEmJXq',
+    features:['Galaxy AI','Outdoor Mode','Extra Brightness','High-end animations','Fully working camera','Native Secure Folder','Battery Health','And much more'],
+    log:'Everything is working. There are no known errors.',
+    notes:['No one is allowed to use this base without permission.','If you want KSU, use the Hirayuuki kernel. A hotspot error is present with that kernel.','If TWRP shows a system_root error, ignore it.','A clean flash is required.','The system partition is read-only.','The ROM needs time to settle after the first boot.']
+   },
+   'a35|STANDARD':{
+    spec:[['Release','Version 3.0 Stable'],['Base','A356E (One UI 8.5)'],['Kernel','GenV, KSU Legacy'],['Supported device','Galaxy A356E'],['Known issues','None']],
+    url:'https://pixeldrain.com/u/uiDFTg1W',
+    features:['Galaxy AI','Outdoor Mode','Extra Brightness','High-end animations','Fully working camera','Native Secure Folder','Battery Health','And much more'],
+    log:'Everything is working. There are no known errors.',
+    notes:['No one is allowed to use this base without permission.','A clean flash is required.','The system partition is read-only.','The ROM needs time to settle after the first boot.','This base does not support Live Blur modules.']
+   },
+   'a35|CRYBON':{
+    spec:[['Release','Version 1.0 Stable'],['Base','Galaxy A57 5G (One UI 9.0)'],['Kernel','KSU Legacy'],['Supported device','Galaxy A35 5G'],['Known issues','Secure Folder, SSRM warning']],
+    url:'https://pixeldrain.com/u/siZ9KVid',
+    features:['NFC, VoLTE and FOD','Outdoor Mode','Extra Brightness','Galaxy AI','And much more'],
+    log:[['Fixed',['OMX','Bluetooth media and calling','Force reboot','Camera','VNDK mismatch warning','Overlay','FOD','Portrait','eSIM overlay']],['Added',['AOD clock animation','High-end animations','Samsung Messages instead of Google Messages']],['Patched',['Flag Security','Compatibility','Knox','Samsung Health','Device status set to Official']],['Miscellaneous',['Removed FRP','Outdoor Mode','Battery Health in Settings','AppLock and stock Device Care','Extra Brightness','OpenGL instead of Vulkan']],['Camera',['Macro, Night and Food camera modes','Pro Video FHD 120 FPS','Pro Video UHD 60 FPS','UHD 60 FPS video support']]],
+    notes:['No one is allowed to use this base without permission.','Not recommended for devices with 4 GB of RAM.','If TWRP shows a system_root error, ignore it.','A clean flash is required.','The system partition is read-only.','If you have problems with Portrait mode, spoof the device to A51 using the {WH}.','The ROM needs time to settle after the first boot.','If you use a screen protector, enable \u201cIncrease touch sensitivity\u201d in Settings before adding a fingerprint (FOD).','The lockscreen delay is caused by issues in the newer base. Please expect this issue.','Galaxy AI is active in this base. On devices with 4 GB or 6 GB of RAM, turning it off with the {WH} is recommended.']
+  }
+ };
+ function li(a){return a.map(function(x){return '<li>'+esc(x)+'</li>'}).join('')}
+ function detailBody(k,e,lg){
+  var I=lg?null:EI[k+'|'+e[0]];
+  var guide='<a class="btn ghost" href="#wiki" data-wiki="'+(k==='a12f'?'a12':k)+'">Installation guide</a>';
+  if(!I)return '<p>Placeholder description for this edition.</p>'+guide;
+  var wh='<a href="#wiki/modules" data-wiki="modules">WinterHide module</a>';
+  var spec=I.spec.slice(1).map(function(r){return '<div><dt>'+esc(r[0])+'</dt><dd>'+esc(r[1])+'</dd></div>'}).join('');
+  var feats=I.features.map(function(x){return '<li>'+esc(x)+'</li>'}).join('');
+  var log=typeof I.log==='string'?'<p class="cr" style="color:var(--ink);font-weight:600">'+esc(I.log)+'</p>':(I.log||[]).map(function(g,i){var c=g[1].length;return '<details'+(i===0?' open':'')+'><summary><span>'+esc(g[0])+'</span><span class="n">'+c+(c===1?' change':' changes')+'</span></summary><ul>'+li(g[1])+'</ul></details>'}).join('');
+  function sec(t,b){return '<div class="ds"><h3>'+t+'</h3><div>'+b+'</div></div>'}
+  var notes=I.notes.map(function(n){return '<li>'+esc(n).replace('{WH}',wh)+'</li>'}).join('');
+  return '<div class="dl-top"><dl class="dl-card dl-spec">'+spec+'</dl>'
+   +'<div class="dl-card dl-get"><div><p class="lab">Latest release</p><p class="big">'+esc(I.spec[0][1])+'</p><p class="sub">'+(I.url?'Hosted on Pixeldrain':'Download link coming soon')+'</p></div>'
+   +'<div class="btns">'+(I.url?'<a class="btn solid" href="'+I.url+'" target="_blank" rel="noopener noreferrer">Download</a>':'<span class="btn solid off" aria-disabled="true">Coming soon</span>')+''+guide+'</div></div></div>'
+   +sec('Features','<ul class="ft">'+feats+'</ul>')
+   +(log?sec('Changelog',typeof I.log==='string'?log:'<div class="cl">'+log+'</div>'):'')
+   +sec('Before you flash','<ul class="warn">'+notes+'</ul>')
+   +sec('Credits',CREDITS);
+ }
+ function openDetail(k,n,lg){
+  var _l=lg?(D[k]&&D[k].legacy||[]):(D[k]&&D[k].eds||[]);
+  if(anim||!window.D||!D[k]||!_l[n])return;
+  anim=true;savedY=window.scrollY;
+  var d=D[k],e=_l[n];document.title='Vought Project: '+e[0]+' Edition';
+  body.classList.add('fading');
+  setTimeout(function(){
+   det.innerHTML='<div class="wrap"><a class="wiki-back" href="#top" data-back><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5M12 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>Back to home</a>'+((function(){var B=lg?null:({a51:{STANDARD:BAN,CRYSTAL:BAN_A51_CRYSTAL,CRYBON:BAN_A51_CRYBON},a12f:{STANDARD:BAN12,CRYSTAL:BAN_A12_CRYSTAL},a35:{STANDARD:BAN35,CRYBON:BAN_A35_CRYBON}}[k]||{})[e[0]];return B?'<div class="dbanner img"><img src="'+B+'" alt="'+esc(e[0])+' Edition '+esc(d.name)+' banner"></div>':'<div class="dbanner">Banner placeholder</div>'})())+((!lg&&EI[k+'|'+e[0]])?'':'<h2>'+esc(e[0])+'</h2><p class="dmeta">'+esc(d.name)+' \u00b7 '+(lg?'End of life':'Version '+(e[2]||'0.0.0'))+'</p>')+detailBody(k,e,lg)+'</div>';
+   body.classList.add('in-detail');
+   window.scrollTo({top:0,behavior:'instant'});
+   requestAnimationFrame(function(){requestAnimationFrame(function(){det.classList.add('show');anim=false})});
+  },420);
+ }
+ function closeDetail(){
+  if(anim)return;anim=true;
+  det.classList.remove('show');document.title='Vought Project';
+  setTimeout(function(){
+   body.classList.remove('in-detail');
+   window.scrollTo({top:savedY,behavior:'instant'});
+   det.innerHTML='';
+   requestAnimationFrame(function(){requestAnimationFrame(function(){body.classList.remove('fading');label();anim=false})});
+  },420);
+ }
+ document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('[data-open]');if(b){ev.preventDefault();openDetail(b.getAttribute('data-dev'),+b.getAttribute('data-ed'),b.hasAttribute('data-leg'))}});
+ document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('[data-back]');if(b){ev.preventDefault();closeDetail()}});
+ document.addEventListener('keydown',function(ev){if(ev.key==='Escape'&&body.classList.contains('in-detail'))closeDetail()});
+ window.addEventListener('scroll',label,{passive:true});
+ fab.addEventListener('click',function(){
+  if(!atTop()){window.scrollTo({top:0,behavior:'smooth'});return}
+  if(busy)return;
+  var next=cur()==='dark'?'light':'dark';
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(reduce||!wipe.animate){setTheme(next);return}
+  busy=true;
+  var r=fab.getBoundingClientRect(),x=r.left+r.width/2,y=r.top+r.height/2;
+  var rad=Math.hypot(Math.max(x,innerWidth-x),Math.max(y,innerHeight-y))+20;
+  var c0='circle(0px at '+x+'px '+y+'px)',c1='circle('+rad+'px at '+x+'px '+y+'px)';
+  wipe.style.background=BG[next];wipe.style.visibility='visible';
+  var a=wipe.animate([{clipPath:c0},{clipPath:c1}],{duration:650,easing:'cubic-bezier(.7,0,.3,1)',fill:'forwards'});
+  a.onfinish=function(){
+   setTheme(next);
+   var b=wipe.animate([{clipPath:c1},{clipPath:c0}],{duration:650,easing:'cubic-bezier(.7,0,.3,1)',fill:'forwards'});
+   b.onfinish=function(){wipe.style.visibility='hidden';a.cancel();b.cancel();busy=false};
+  };
+ });
+ label();
+})();
+</script>
+<script>
+(function(){
+ var tw=document.getElementById('tw'),dot=document.getElementById('ttl');
+ if(!tw||window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+ var W=['VOUGHT\nPROJECT.','CUSTOM\nROMS.'],i=0,cur=W[0];
+ function wait(ms,fn){dot.classList.remove('typing');setTimeout(fn,ms)}
+ function erase(){dot.classList.add('typing');if(cur.length){cur=cur.slice(0,-1);tw.textContent=cur;setTimeout(erase,50)}else{i=(i+1)%W.length;wait(250,write)}}
+ function write(){dot.classList.add('typing');var t=W[i];if(cur.length<t.length){cur=t.slice(0,cur.length+1);tw.textContent=cur;setTimeout(write,90)}else{wait(5500,erase)}}
+ wait(5500,erase);
+})();
+</script>
+<script>
+(function(){
+ var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ document.querySelectorAll('#faq details').forEach(function(d){
+  var s=d.querySelector('summary'),p=d.querySelector('p'),a=null,fa=null,want=d.open;
+  function done(){d.style.overflow='';if(a){a=null}if(fa){fa.cancel();fa=null}d.classList.remove('closing')}
+  s.addEventListener('click',function(e){
+   if(reduce||!d.animate)return;
+   e.preventDefault();
+   var start=d.getBoundingClientRect().height;if(a){a.cancel();a=null;d.style.overflow=''}
+   var cs=getComputedStyle(d),extra=parseFloat(cs.paddingTop)+parseFloat(cs.paddingBottom)+parseFloat(cs.borderTopWidth)+parseFloat(cs.borderBottomWidth);
+   var end,opening=!want;want=opening;
+   if(opening){d.open=true;d.classList.remove('closing');end=d.getBoundingClientRect().height}
+   else{end=s.offsetHeight+extra;d.classList.add('closing')}
+   d.style.overflow='hidden';
+   a=d.animate({height:[start+'px',end+'px']},{duration:420,easing:'cubic-bezier(.3,.7,.2,1)'});
+   if(p){if(fa)fa.cancel();fa=p.animate({opacity:opening?[0,1]:[1,0]},{duration:opening?360:240,delay:opening?90:0,fill:'both',easing:'ease'})}
+   var cur=a;
+   a.onfinish=function(){if(a!==cur)return;if(!opening)d.open=false;done()};
+  });
+ });
+})();
+</script>
+
+<script id="wiki-requirements" type="application/json">{"shared": {"cleanFlashRequired": true, "stockFirmwareRequired": true, "unlockErasesData": true, "formatErasesData": true, "patchedVbmetaBeforeRecovery": true}, "a51": {"label": "Galaxy A51", "model": "SM-A515F \u00b7 A51 4G", "method": "TWRP ZIP flash", "latestStockRecommended": true, "order": ["stock", "vbmeta", "recovery", "format", "flash"], "steps": [["Flash the latest stock firmware (recommended)", "Download the latest stock firmware for the A515F from SamFW . Put the phone in Download Mode and flash it with Odin, using the BL, AP, CP and CSC files."], ["Flash the patched vbmeta", "Load the patched vbmeta.tar in AP, untick Auto Reboot, press Start, then re-enter Download Mode. Without it the custom recovery fails AVB verification."], ["Reboot to recovery (TWRP)", "If you have not installed TWRP yet, follow Installing a custom recovery first. Then power off and hold Power + Volume Up to boot into TWRP."], ["Format data", "In TWRP, go to Wipe , then Format Data , type yes and confirm. Warning Formatting data erases all user data on the device."], ["Flash the ROM", "The storage is empty after the format, so copy the ROM zip from your PC to the phone, or use ADB Sideload. Then choose Install , select the Vought Project zip and swipe to confirm. When it finishes, reboot to the system. The first boot can take longer than usual. Do not interrupt it."]]}, "a12": {"label": "Galaxy A12", "model": "SM-A127X", "method": "OFOX / TWRP sideload", "modelConfirmationRequired": false, "vbmetaSlot": "AP", "autoReboot": false, "order": ["stock", "unlock", "vbmeta", "recovery", "sideload", "format", "reboot"], "steps": [["Check your firmware", "Make sure you are on the latest stock firmware. You can check on SamFW."], ["Check your bootloader", "Make sure your OEM bootloader is unlocked."], ["Download the recovery and vbmeta", "Download OrangeFox or TWRP from the official site, and download vbmeta.tar from the link above."], ["Enter Download Mode", "Use the combination from Button combinations ."], ["Flash the patched vbmeta", "Load the patched vbmeta.tar in AP, untick Auto Reboot, press Start, then re-enter Download Mode. Without it the custom recovery fails AVB verification."], ["Load the recovery in Odin", "Load the OrangeFox or TWRP .tar file in AP . Under Odin Options , untick Auto Reboot , then press Start ."], ["Force reboot", "Hold Power + Volume Down to force a reboot. As soon as the screen goes black, switch to Power + Volume Up and hold until the recovery loads."], ["Start Sideload mode", "Put OrangeFox or TWRP in Sideload mode. In TWRP, this is Advanced , then ADB Sideload ."], ["Sideload the ROM", "Connect the phone to your computer and sideload the ROM from there. adb sideload \"ROM-file-name.zip\""], ["Format data", "Before you restart, go to Wipe and format data."], ["Reboot and enjoy", "Reboot to the system. The first boot can take longer than usual."]]}, "a35": {"label": "Galaxy A35", "model": "SM-A356E", "method": "TWRP \u2192 Fastboot installer", "requiredOneUi": "8", "requiredSecurityPatch": "2025-10", "odinVersion": "3.13.3", "twrpVersion": "3.7.1_12-2-a35x", "romFilename": "Vought Project V3.0 Stable-A356E.zip", "installerFilename": "Fastboot_Flasher.bat", "installerKeys": ["1", "B", "R"], "order": ["stock", "unlock", "vbmeta", "recovery", "fastboot", "flash", "format", "reboot"], "steps": [["Boot into Download Mode", "Power off your phone completely. Press and hold Volume Up + Volume Down , then connect the phone to your PC with a USB cable while holding both buttons."], ["Flash the patched vbmeta", "Load the patched vbmeta.tar in AP, untick Auto Reboot, press Start, then re-enter Download Mode. Without it the custom recovery fails AVB verification."], ["Flash TWRP", "Open Odin and select the TWRP .tar file in the AP slot. Click Start to begin flashing. As soon as the phone's screen turns black, immediately press and hold Power + Volume Up until you see the Samsung logo."], ["Boot into TWRP", "Once TWRP boots, go to Reboot , then Fastboot . Your phone should now boot into Fastboot Mode."], ["Prepare the ROM files", "Extract Vought Project V3.0 Stable-A356E.zip directly into your platform-tools folder. Make sure Fastboot_Flasher.bat is in the same folder as your platform-tools files."], ["Start the flasher", "Double-click Fastboot_Flasher.bat to launch the Vought Project Installer."], ["Check the Fastboot connection", "Make sure your phone is detected in Fastboot Mode, then press 1 to select Flash Complete ROM . Follow the instructions shown by the installer and wait for the flashing process to finish."], ["Reboot to recovery", "Once flashing is complete, press B to return to the first menu. Then press R to reboot into Recovery Mode."], ["Format data", "Once you are back in Recovery, go to Wipe , then Format Data . Type yes , then confirm and continue. Warning Formatting Data will erase all user data on the device."], ["Reboot to system", "Once the format is complete, reboot your phone to the system. The first boot may take longer than usual. Do not panic and do not interrupt the boot process. Enjoy Vought Project!"]]}, "pageOrder": ["welcome", "before-you-start", "download-mode", "unlock-bootloader", "custom-recovery", "install-a51", "install-a12", "install-a35", "modules"], "pageTitles": {"welcome": "Welcome", "before-you-start": "Before you start", "download-mode": "Button combinations", "unlock-bootloader": "Unlocking the bootloader", "custom-recovery": "Installing a custom recovery", "install-a51": "Galaxy A51 (A515F)", "install-a12": "Galaxy A12 (A127X)", "install-a35": "Galaxy A35 (A356E)", "modules": "Modules"}, "pages": {"welcome": "<article class=\"page\" data-title=\"Welcome\" id=\"p-welcome\">\n<div class=\"crumb\">Wiki</div>\n<h1>Welcome to the Vought Project wiki</h1>\n<p class=\"lead\">Step by step install guides for the Galaxy A51, A12 and A35. Read each page fully before you flash anything.</p>\n<div class=\"callout\"><b>Clean flash required</b><p>Vought Project must be installed with a clean flash on all three devices. That erases everything on the phone, so back up first. You also need to be on stock firmware before you begin.</p></div>\n<h2 class=\"first\">New here? Start with the basics</h2>\n<div class=\"cards two\">\n<a class=\"card\" href=\"#before-you-start\"><strong>Before you start</strong><span>What you need, and what you are agreeing to.</span></a>\n<a class=\"card\" href=\"#download-mode\"><strong>Button combinations</strong><span>How to reach Download Mode and recovery on each phone.</span></a>\n<a class=\"card\" href=\"#unlock-bootloader\"><strong>Unlocking the bootloader</strong><span>OEM unlocking and the unlock screen.</span></a>\n<a class=\"card\" href=\"#custom-recovery\"><strong>Installing a custom recovery</strong><span>Putting TWRP or OrangeFox on your phone with Odin.</span></a>\n</div>\n<h2>Ready to install? Pick your device</h2>\n<div class=\"cards\">\n<a class=\"card\" href=\"#install-a51\"><strong>Galaxy A51</strong><span>A515F installation guide.</span></a>\n<a class=\"card\" href=\"#install-a12\"><strong>Galaxy A12</strong><span>A127X installation guide.</span></a>\n<a class=\"card\" href=\"#install-a35\"><strong>Galaxy A35</strong><span>A356E installation guide.</span></a>\n</div>\n</article>", "before-you-start": "<article class=\"page\" data-title=\"Before you start\" id=\"p-before-you-start\">\n<div class=\"crumb\">Get started</div>\n<h1>Before you start</h1>\n<p class=\"lead\">A few things apply to every device. Read this page once before you touch your phone.</p>\n<h2 class=\"first\">A clean flash is required</h2>\n<p>On the A51, A12 and A35, Vought Project has to be installed on a clean system. During the install you format the data partition, which erases all apps, photos, messages and settings on the phone. Back up anything you want to keep before you begin.</p>\n<h2>Start from stock firmware</h2>\n<p>You must be running the latest stock firmware for your device before you continue. Download it from <a class=\"ext\" href=\"https://samfw.com\" rel=\"noopener\" target=\"_blank\">SamFW</a> and flash it with Odin. The Galaxy A35 has a specific firmware requirement, which is listed in its install guide.</p>\n<h2>What you will need</h2>\n<ul>\n<li>A Windows PC and a good USB cable</li>\n<li><b>Odin 3.13.3</b> to flash files to the phone (<a class=\"ext\" href=\"https://samfw.com/Odin/Odin3_v3.13.3.zip\" rel=\"noopener\" target=\"_blank\">download</a>)</li>\n<li>An <b>unlocked bootloader</b> (see <a href=\"#unlock-bootloader\">Unlocking the bootloader</a>)</li>\n<li>A <b>custom recovery</b>, TWRP or OrangeFox (see <a href=\"#custom-recovery\">Installing a custom recovery</a>)</li>\n<li>The latest <b>stock firmware</b> for your phone, from SamFW</li>\n<li>The <b>Vought Project ROM zip</b> for your device and edition, from the <a href=\"index.html#devices\">download page</a></li>\n</ul>\n<p>Some devices need a few extra files. Those are listed at the top of each install guide.</p>\n<h2>Disclaimer</h2>\n<div class=\"callout\"><b>Read this before you continue</b>\n<ul>\n<li>Your warranty is now void.</li>\n<li>We are not responsible for bricked devices, dead SD cards, thermonuclear war, or you getting fired because the alarm app failed.</li>\n<li>Please do some research if you have any concerns about flashing this ROM before proceeding!</li>\n<li>YOU are choosing to make these modifications, and if you point the finger at us for messing up your device, we will laugh at you. HARD!</li>\n</ul>\n</div>\n</article>", "download-mode": "<article class=\"page\" data-title=\"Button combinations\" id=\"p-download-mode\">\n<div class=\"crumb\">Preparation</div>\n<h1>Button combinations</h1>\n<p class=\"lead\">The A51, A12 and A35 use the same button combinations. Keep this page handy, because you will use them several times during the install.</p>\n<div class=\"tblwrap\"><table class=\"tbl\">\n<thead><tr><th>What you want</th><th>What to press</th></tr></thead>\n<tbody>\n<tr><td>Download Mode</td><td>Power off completely. Hold <kbd>Volume Up</kbd> + <kbd>Volume Down</kbd>, then connect the USB cable to your PC.</td></tr>\n<tr><td>Bootloader Unlock Mode</td><td>From the Download Mode warning screen, long-press <kbd>Volume Up</kbd>.</td></tr>\n<tr><td>Recovery (TWRP / OrangeFox)</td><td>Hold <kbd>Power</kbd> + <kbd>Volume Up</kbd> until you see the Samsung logo.</td></tr>\n<tr><td>Force reboot</td><td>Hold <kbd>Power</kbd> + <kbd>Volume Down</kbd>.</td></tr>\n</tbody>\n</table></div>\n<h2>Entering Download Mode</h2>\n<ol class=\"steps\">\n<li><h3>Power off the phone</h3><p>Shut it down completely. Do not just lock the screen.</p></li>\n<li><h3>Hold both volume buttons</h3><p>Press and hold <kbd>Volume Up</kbd> and <kbd>Volume Down</kbd> together.</p></li>\n<li><h3>Connect the cable</h3><p>While still holding both buttons, plug the USB cable into the phone, with the other end already connected to your PC.</p></li>\n<li><h3>Continue</h3><p>When the warning screen appears, release the buttons and press <kbd>Volume Up</kbd> to continue. Odin should now show your phone as added.</p></li>\n</ol>\n<div class=\"callout\"><b>Booting into recovery after flashing</b><p>After you flash a recovery with Odin, switch to <kbd>Power</kbd> + <kbd>Volume Up</kbd> straight away. The exact moment to switch is explained in each device guide.</p></div>\n</article>", "unlock-bootloader": "<article class=\"page\" data-title=\"Unlocking the bootloader\" id=\"p-unlock-bootloader\">\n<div class=\"crumb\">Preparation</div>\n<h1>Unlocking the bootloader</h1>\n<p class=\"lead\">Every supported phone needs an unlocked bootloader before a custom recovery or Vought Project can be installed. Follow these steps closely.</p>\n<div class=\"callout\"><b>This erases your data</b><p>Unlocking the bootloader wipes the phone. Back up your files first.</p></div>\n<ol class=\"steps\">\n<li><h3>Enable Developer options</h3><p>Open <b>Settings</b>, go to <b>About phone</b> then <b>Software information</b>, and tap <b>Build number</b> seven times.</p></li>\n<li><h3>Turn on OEM Unlocking</h3><p>Go to <b>Settings</b>, then <b>Developer options</b>, and switch on <b>OEM unlocking</b>.</p></li>\n<li><h3>Connect the phone to your PC</h3><p>Power the phone off, hold <kbd>Volume Up</kbd> + <kbd>Volume Down</kbd>, and plug the phone into your PC while holding both buttons.</p></li>\n<li><h3>Open Bootloader Unlock Mode</h3><p>Keep going until the warning screen appears, then long-press <kbd>Volume Up</kbd> to enter Bootloader Unlock Mode.</p></li>\n<li><h3>Unlock</h3><p>Press <kbd>Volume Up</kbd> to unlock the bootloader. The phone will reset and reboot.</p></li>\n</ol>\n<div class=\"callout\"><b>Cannot find OEM Unlocking?</b><p>Samsung can hide this option for a while on a phone that was just set up or reset, often for up to a week. Connect to Wi-Fi, keep automatic date and time turned on, and check again later.</p></div>\n</article>", "custom-recovery": "<article class=\"page\" data-title=\"Installing a custom recovery\" id=\"p-custom-recovery\">\n<div class=\"crumb\">Preparation</div>\n<h1>Installing a custom recovery</h1>\n<p class=\"lead\">A custom recovery lets you format data and install the ROM. You flash it with Odin, then boot straight into it.</p>\n<div class=\"callout\"><b>Flash a patched vbmeta before your custom recovery</b><p>Before you flash TWRP or OrangeFox, you must flash a <strong>patched vbmeta</strong> that disables Android Verified Boot (AVB). If you skip it, the phone fails AVB verification and will not boot the custom recovery (or the system). Flash the patched <code>vbmeta.tar</code> in the <strong>AP</strong> slot of Odin first, then flash the recovery.</p></div><h2 class=\"first\">Which recovery to use</h2>\n<div class=\"tblwrap\"><table class=\"tbl\">\n<thead><tr><th>Device</th><th>Recovery</th></tr></thead>\n<tbody>\n<tr><td>Galaxy A51 (A515F)</td><td>TWRP, from the <a class=\"ext\" href=\"https://twrp.me\" rel=\"noopener\" target=\"_blank\">official site</a></td></tr>\n<tr><td>Galaxy A12 (A127X)</td><td>OrangeFox (<a class=\"ext\" href=\"https://orangefox.download\" rel=\"noopener\" target=\"_blank\">official site</a>) or TWRP (<a class=\"ext\" href=\"https://twrp.me\" rel=\"noopener\" target=\"_blank\">official site</a>)</td></tr>\n<tr><td>Galaxy A35 (A356E)</td><td><a class=\"ext\" href=\"https://eu.dl.twrp.me/a35x/twrp-3.7.1_12-2-a35x.img.tar.html\" rel=\"noopener\" target=\"_blank\">TWRP for Galaxy A35</a></td></tr>\n</tbody>\n</table></div>\n<h2>The general process</h2>\n<ol class=\"steps\">\n<li><h3>Unlock the bootloader first</h3><p>A recovery cannot be installed on a locked bootloader. See <a href=\"#unlock-bootloader\">Unlocking the bootloader</a>.</p></li>\n<li><h3>Enter Download Mode</h3><p>Use the combination from <a href=\"#download-mode\">Button combinations</a>.</p></li>\n<li><h3>Flash the patched vbmeta</h3><p>Load the patched <code>vbmeta.tar</code> in the <b>AP</b> slot, untick <b>Auto Reboot</b> and press <b>Start</b>. Then re-enter Download Mode. This disables AVB so the recovery is allowed to boot.</p></li>\n<li><h3>Flash the recovery with Odin</h3><p>Open Odin, load the recovery <code>.tar</code> file in the <b>AP</b> slot and press <b>Start</b>.</p></li>\n<li><h3>Boot straight into recovery</h3><p>As soon as the flash finishes, boot into the recovery with <kbd>Power</kbd> + <kbd>Volume Up</kbd> before the phone starts the system. If it boots into the system first, you may need to flash the recovery again.</p></li>\n</ol>\n<p>The small differences between phones, such as the Auto Reboot option in Odin, are covered in each install guide.</p>\n</article>", "install-a51": "<article class=\"page\" data-title=\"Galaxy A51 (A515F)\" id=\"p-install-a51\">\n<div class=\"crumb\">Installing Vought Project</div>\n<h1>Galaxy A51 (A515F)</h1>\n<div class=\"meta\"><span class=\"tag\">Clean flash</span><span class=\"tag\">Stock firmware first</span><span class=\"tag\">TWRP</span></div>\n<p class=\"lead\">Five steps: stock firmware, patched vbmeta, recovery, format data, ROM. Make sure you have read <a href=\"#before-you-start\">Before you start</a> and have an unlocked bootloader.</p>\n<div class=\"callout\"><b>Flash a patched vbmeta before your custom recovery</b><p>Before you flash TWRP or OrangeFox, you must flash a <strong>patched vbmeta</strong> that disables Android Verified Boot (AVB). If you skip it, the phone fails AVB verification and will not boot the custom recovery (or the system). Flash the patched <code>vbmeta.tar</code> in the <strong>AP</strong> slot of Odin first, then flash the recovery.</p></div><ol class=\"steps\">\n<li><h3>Flash the latest stock firmware (recommended)</h3>\n<p>Download the latest stock firmware for the A515F from <a class=\"ext\" href=\"https://samfw.com\" rel=\"noopener\" target=\"_blank\">SamFW</a>. Put the phone in <a href=\"#download-mode\">Download Mode</a> and flash it with Odin, using the BL, AP, CP and CSC files.</p></li>\n<li><h3>Flash the patched vbmeta</h3><p>In <a href=\"#download-mode\">Download Mode</a>, open Odin, load the patched <code>vbmeta.tar</code> for the A515F in <b>AP</b>, untick <b>Auto Reboot</b> and press <b>Start</b>. When Odin shows <b>PASS</b>, go back into Download Mode: hold <kbd>Power</kbd> + <kbd>Volume Down</kbd> and, as soon as the screen goes black, switch to <kbd>Volume Up</kbd> + <kbd>Volume Down</kbd>.</p><div class=\"callout\"><b>Do not skip this</b><p>Without the patched vbmeta, the custom recovery fails AVB verification and will not boot.</p></div></li>\n<li><h3>Reboot to recovery (TWRP)</h3>\n<p>If you have not installed TWRP yet, follow <a href=\"#custom-recovery\">Installing a custom recovery</a> first. Then power off and hold <kbd>Power</kbd> + <kbd>Volume Up</kbd> to boot into TWRP.</p></li>\n<li><h3>Format data</h3>\n<p>In TWRP, go to <b>Wipe</b>, then <b>Format Data</b>, type <code>yes</code> and confirm.</p>\n<div class=\"callout\"><b>Warning</b><p>Formatting data erases all user data on the device.</p></div></li>\n<li><h3>Flash the ROM</h3>\n<p>The storage is empty after the format, so copy the ROM zip from your PC to the phone, or use ADB Sideload. Then choose <b>Install</b>, select the Vought Project zip and swipe to confirm. When it finishes, reboot to the system.</p>\n<p>The first boot can take longer than usual. Do not interrupt it.</p></li>\n</ol>\n</article>", "install-a12": "<article class=\"page\" data-title=\"Galaxy A12 (A127X)\" id=\"p-install-a12\">\n<div class=\"crumb\">Installing Vought Project</div>\n<h1>Galaxy A12 (A127X)</h1>\n<div class=\"meta\"><span class=\"tag\">Clean flash</span><span class=\"tag\">Stock firmware first</span><span class=\"tag\">OrangeFox / TWRP</span></div>\n<p class=\"lead\">You flash a recovery with Odin, then sideload the ROM from your computer.</p>\n<div class=\"callout\"><b>Flash a patched vbmeta before your custom recovery</b><p>Before you flash TWRP or OrangeFox, you must flash a <strong>patched vbmeta</strong> that disables Android Verified Boot (AVB). If you skip it, the phone fails AVB verification and will not boot the custom recovery (or the system). Flash the patched <code>vbmeta.tar</code> in the <strong>AP</strong> slot of Odin first, then flash the recovery.</p></div><h2 class=\"first\">Requirements</h2>\n<ul>\n<li>The latest stock firmware, checked on <a class=\"ext\" href=\"https://samfw.com\" rel=\"noopener\" target=\"_blank\">SamFW</a></li>\n<li>An unlocked bootloader (see <a href=\"#unlock-bootloader\">Unlocking the bootloader</a>)</li>\n<li>OrangeFox or TWRP, from the official site (see <a href=\"#custom-recovery\">Installing a custom recovery</a>)</li>\n<li><a class=\"ext\" href=\"https://drive.google.com/file/d/1DROsPQb2gIuNgD0F-1r7r7Ju30OrwJkN/view?usp=drive_link\" rel=\"noopener\" target=\"_blank\">vbmeta.tar</a></li>\n<li>Odin 3.13.3 (<a class=\"ext\" href=\"https://samfw.com/Odin/Odin3_v3.13.3.zip\" rel=\"noopener\" target=\"_blank\">download</a>)</li>\n</ul>\n<h2>Flashing guide</h2>\n<ol class=\"steps\">\n<li><h3>Check your firmware</h3><p>Make sure you are on the latest stock firmware. You can check on SamFW.</p></li>\n<li><h3>Check your bootloader</h3><p>Make sure your OEM bootloader is unlocked.</p></li>\n<li><h3>Download the recovery and vbmeta</h3><p>Download OrangeFox or TWRP from the official site, and download vbmeta.tar from the link above.</p></li>\n<li><h3>Enter Download Mode</h3><p>Use the combination from <a href=\"#download-mode\">Button combinations</a>.</p></li>\n<li><h3>Flash the patched vbmeta</h3><p>In <a href=\"#download-mode\">Download Mode</a>, open Odin, load the <code>vbmeta.tar</code> you downloaded above in <b>AP</b>, untick <b>Auto Reboot</b> and press <b>Start</b>. When Odin shows <b>PASS</b>, go back into Download Mode: hold <kbd>Power</kbd> + <kbd>Volume Down</kbd> and, as soon as the screen goes black, switch to <kbd>Volume Up</kbd> + <kbd>Volume Down</kbd>.</p><div class=\"callout\"><b>Do not skip this</b><p>Without the patched vbmeta, the custom recovery fails AVB verification and will not boot.</p></div></li>\n<li><h3>Load the recovery in Odin</h3><p>Load the OrangeFox or TWRP <code>.tar</code> file in <b>AP</b>. Under Odin <b>Options</b>, untick <b>Auto Reboot</b>, then press <b>Start</b>.</p></li>\n<li><h3>Force reboot</h3><p>Hold <kbd>Power</kbd> + <kbd>Volume Down</kbd> to force a reboot. As soon as the screen goes black, switch to <kbd>Power</kbd> + <kbd>Volume Up</kbd> and hold until the recovery loads.</p></li>\n<li><h3>Start Sideload mode</h3><p>Put OrangeFox or TWRP in Sideload mode. In TWRP, this is <b>Advanced</b>, then <b>ADB Sideload</b>.</p></li>\n<li><h3>Sideload the ROM</h3><p>Connect the phone to your computer and sideload the ROM from there.</p><pre><code>adb sideload \"ROM-file-name.zip\"</code></pre></li>\n<li><h3>Format data</h3><p>Before you restart, go to <b>Wipe</b> and format data.</p></li>\n<li><h3>Reboot and enjoy</h3><p>Reboot to the system. The first boot can take longer than usual.</p></li>\n</ol>\n</article>", "install-a35": "<article class=\"page\" data-title=\"Galaxy A35 (A356E)\" id=\"p-install-a35\">\n<div class=\"crumb\">Installing Vought Project</div>\n<h1>Galaxy A35 (A356E)</h1>\n<div class=\"meta\"><span class=\"tag\">Clean flash</span><span class=\"tag\">Fastboot installer</span><span class=\"tag\">TWRP</span></div>\n<p class=\"lead\">The A35 has two editions and each one installs differently. Follow the section for the edition you downloaded.</p>\n<h2 class=\"first\">STANDARD Edition requirements</h2>\n<ul>\n<li>A patched <code>vbmeta.tar</code> for the A356E</li>\n<li>Galaxy A35 running <b>One UI 8</b> with the <b>October 2025 Security Patch</b></li>\n<li>An unlocked bootloader (see <a href=\"#unlock-bootloader\">Unlocking the bootloader</a>)</li>\n<li>Odin 3.13.3 (<a class=\"ext\" href=\"https://samfw.com/Odin/Odin3_v3.13.3.zip\" rel=\"noopener\" target=\"_blank\">download</a>)</li>\n<li><a class=\"ext\" href=\"https://eu.dl.twrp.me/a35x/twrp-3.7.1_12-2-a35x.img.tar.html\" rel=\"noopener\" target=\"_blank\">TWRP for Galaxy A35</a></li>\n<li><b>Vought Project V3.0 Stable-A356E.zip</b></li>\n<li>Android <a class=\"ext\" href=\"https://developer.android.com/tools/releases/platform-tools\" rel=\"noopener\" target=\"_blank\">platform-tools</a> (Fastboot)</li>\n</ul>\n<h2>STANDARD Edition flashing guide</h2><div class=\"callout\"><b>Flash a patched vbmeta before your custom recovery</b><p>Before you flash TWRP or OrangeFox, you must flash a <strong>patched vbmeta</strong> that disables Android Verified Boot (AVB). If you skip it, the phone fails AVB verification and will not boot the custom recovery (or the system). Flash the patched <code>vbmeta.tar</code> in the <strong>AP</strong> slot of Odin first, then flash the recovery.</p></div>\n<ol class=\"steps\">\n<li><h3>Boot into Download Mode</h3>\n<p>Power off your phone completely. Press and hold <kbd>Volume Up</kbd> + <kbd>Volume Down</kbd>, then connect the phone to your PC with a USB cable while holding both buttons.</p></li>\n<li><h3>Flash the patched vbmeta</h3><p>In <a href=\"#download-mode\">Download Mode</a>, open Odin, load the patched <code>vbmeta.tar</code> for the A356E in <b>AP</b>, untick <b>Auto Reboot</b> and press <b>Start</b>. When Odin shows <b>PASS</b>, go back into Download Mode: hold <kbd>Power</kbd> + <kbd>Volume Down</kbd> and, as soon as the screen goes black, switch to <kbd>Volume Up</kbd> + <kbd>Volume Down</kbd>.</p><div class=\"callout\"><b>Do not skip this</b><p>Without the patched vbmeta, the custom recovery fails AVB verification and will not boot.</p></div></li>\n<li><h3>Flash TWRP</h3>\n<p>Open Odin and select the TWRP <code>.tar</code> file in the <b>AP</b> slot. Click <b>Start</b> to begin flashing.</p>\n<p>As soon as the phone's screen turns black, immediately press and hold <kbd>Power</kbd> + <kbd>Volume Up</kbd> until you see the Samsung logo.</p></li>\n<li><h3>Boot into TWRP</h3>\n<p>Once TWRP boots, go to <b>Reboot</b>, then <b>Fastboot</b>. Your phone should now boot into Fastboot Mode.</p></li>\n<li><h3>Prepare the ROM files</h3>\n<p>Extract <b>Vought Project V3.0 Stable-A356E.zip</b> directly into your <code>platform-tools</code> folder. Make sure <code>Fastboot_Flasher.bat</code> is in the same folder as your platform-tools files.</p></li>\n<li><h3>Start the flasher</h3>\n<p>Double-click <code>Fastboot_Flasher.bat</code> to launch the Vought Project Installer.</p></li>\n<li><h3>Check the Fastboot connection</h3>\n<p>Make sure your phone is detected in Fastboot Mode, then press <kbd>1</kbd> to select <b>Flash Complete ROM</b>. Follow the instructions shown by the installer and wait for the flashing process to finish.</p></li>\n<li><h3>Reboot to recovery</h3>\n<p>Once flashing is complete, press <kbd>B</kbd> to return to the first menu. Then press <kbd>R</kbd> to reboot into Recovery Mode.</p></li>\n<li><h3>Format data</h3>\n<p>Once you are back in Recovery, go to <b>Wipe</b>, then <b>Format Data</b>. Type <code>yes</code>, then confirm and continue.</p>\n<div class=\"callout\"><b>Warning</b><p>Formatting Data will erase all user data on the device.</p></div></li>\n<li><h3>Reboot to system</h3>\n<p>Once the format is complete, reboot your phone to the system. The first boot may take longer than usual. Do not panic and do not interrupt the boot process.</p>\n<p><b>Enjoy Vought Project!</b></p></li>\n</ol>\n<h2>CRYBON Edition requirements</h2>\n<p>To flash Vought Project V1.0 CRYBON Edition on the Galaxy A35 (A356E), the device must run One UI 8.5 with the May 2026 security patch and an unlocked bootloader. Back up all your data first, because formatting data erases everything on the phone. Read this guide completely before you start.</p>\n<ul>\n<li>Galaxy A35 running <b>One UI 8.5</b> with the <b>May 2026 Security Patch</b></li>\n<li>An unlocked bootloader (see <a href=\"#unlock-bootloader\">Unlocking the bootloader</a>)</li>\n<li>Odin 3.13.3 (<a class=\"ext\" href=\"https://samfw.com/Odin/Odin3_v3.13.3.zip\" rel=\"noopener\" target=\"_blank\">download</a>)</li>\n<li><a class=\"ext\" href=\"https://eu.dl.twrp.me/a35x/twrp-3.7.1_12-2-a35x.img.tar.html\" rel=\"noopener\" target=\"_blank\">TWRP for Galaxy A35</a></li>\n<li><b>Vought Project V1.0 CRYBON Edition A356E.zip</b></li>\n</ul>\n<h2>CRYBON Edition flashing guide</h2>\n<ol class=\"steps\">\n<li><h3>Boot into Download Mode</h3>\n<p>Power off your phone completely. Press and hold <kbd>Volume Up</kbd> + <kbd>Volume Down</kbd>, then connect the phone to your PC with a USB cable while holding both buttons.</p></li>\n<li><h3>Flash TWRP</h3>\n<p>Open Odin and select the TWRP <code>.tar</code> file in the <b>AP</b> slot. Click <b>Start</b> to begin flashing.</p>\n<p>As soon as the phone's screen turns black, immediately press and hold <kbd>Power</kbd> + <kbd>Volume Up</kbd> until you see the Samsung logo.</p></li>\n<li><h3>Format data</h3>\n<p>Once you are back in Recovery, go to <b>Wipe</b>, then <b>Format Data</b>. Type <code>yes</code>, then confirm and continue.</p>\n<div class=\"callout\"><b>Warning</b><p>Formatting Data will erase all user data on the device.</p></div></li>\n<li><h3>Install the ROM</h3>\n<p>Copy <b>Vought Project V1.0 CRYBON Edition A356E.zip</b> to your phone's internal storage. In TWRP, tap <b>Install</b>, select the ROM zip and swipe to start flashing.</p>\n<p>Follow the instructions shown by the installer and wait for the flashing process to finish.</p></li>\n<li><h3>Reboot to system</h3>\n<p>When the flash is done, reboot to the system. The first boot may take longer than usual. Do not panic and do not interrupt the boot process.</p>\n<p><b>Enjoy Vought Project!</b></p></li>\n</ol>\n</article>\n", "modules": "<article class=\"page\" data-title=\"Modules\" id=\"p-modules\">\n<div class=\"crumb\">Extras</div>\n<h1>Modules</h1>\n<p class=\"lead\">Optional modules and extras that work alongside Vought Project. Flash only the ones you need.</p>\n<h2 class=\"first\">WinterHide</h2>\n<div class=\"meta\"><span class=\"tag\">Magisk / KernelSU</span><span class=\"tag\">Recovery</span></div>\n<p><b>Spoof it. Hide it. Winter does it.</b></p>\n<p>WinterHide is a dynamic Magisk / KernelSU module designed for device spoofing and system customization. It uses a simple recovery-based interface that you control entirely with the volume buttons.</p>\n<p>Instead of hardcoding every supported device into the module logic, WinterHide detects the available spoofers and customization packs from the module itself.</p>\n<p><b>Where it is used</b></p>\n<ul>\n<li>Galaxy A35 CRYBON Edition: spoof the device to A51 if you have problems with Portrait mode.</li>\n<li>Galaxy A35 CRYBON Edition: turn Galaxy AI off on devices with 4 GB or 6 GB of RAM.</li>\n</ul>\n<p><a class=\"btn solid\" href=\"https://github.com/xv2ice/WinterHide/releases/tag/v1.0.0\" rel=\"noopener\" target=\"_blank\">Download WinterHide</a></p>\n<h2>0.5x Camera Hotfix</h2>\n<div class=\"meta\"><span class=\"tag\">Galaxy A51</span><span class=\"tag\">Module</span></div>\n<p>Fixes the 0.5x camera bug that has been present since the One UI 8.5 builds. The bug appears to affect the A51 only. Tested on Vought Project CRYSTAL 2.0 and Vought Project 3.0 for the A51.</p>\n<div class=\"callout\"><b>Before you flash</b><p>Clear the Camera app data first.</p></div>\n<p><b>What it fixes</b></p>\n<ul>\n<li>0.5x lens switching</li>\n<li>1x / 0.5x UI</li>\n<li>0.5x is disabled at 60 FPS to prevent crashes</li>\n</ul>\n<p><a class=\"btn solid\" href=\"https://pixeldrain.com/u/SvhnB7Ex\" rel=\"noopener\" target=\"_blank\">Download 0.5x Camera Hotfix</a></p>\n</article>"}}</script>
+<script>
+(function(){
+ var data=JSON.parse(document.getElementById('wiki-requirements').textContent),wiki=document.getElementById('wiki'),ORDER=data.pageOrder;
+ var aliases={overview:'welcome',a51:'install-a51',a12:'install-a12',a35:'install-a35'},reverse={welcome:'overview','install-a51':'a51','install-a12':'a12','install-a35':'a35'};
+ var links=Array.from(wiki.querySelectorAll('#nav a.pl')),q=document.getElementById('q'),side=wiki.querySelector('#side'),mb=wiki.querySelector('#menubtn');
+ wiki.querySelector('#wiki-pages').innerHTML=ORDER.map(function(id){return data.pages[id]}).join('');
+ var TEXT={};ORDER.forEach(function(id){TEXT[id]=(data.pageTitles[id]+' '+wiki.querySelector('#p-'+id).textContent).toLowerCase()});
+ function pageKey(id){return reverse[id]||id}
+ function href(id){var key=pageKey(id);return '#wiki'+(key==='overview'?'':'/'+key)}
+ function closeMenu(){side.classList.remove('open');document.body.classList.remove('wiki-menu-open');mb.setAttribute('aria-expanded','false')}
+ function calm(){return window.matchMedia('(prefers-reduced-motion: reduce)').matches}
+ var tm=0,booting=true,pendingEl=null;
+ function show(id){
+  var b=document.body,wasWiki=b.classList.contains('in-wiki'),det=document.getElementById('detail');
+  clearTimeout(tm);
+  b.classList.add('in-wiki');b.classList.remove('in-detail','fading','xout');det.classList.remove('show');
+  ORDER.forEach(function(p){var article=wiki.querySelector('#p-'+p);article.classList.remove('leaving');article.classList.toggle('show',p===id);article.hidden=p!==id});
+  links.forEach(function(a){var active=a.dataset.p===id;a.classList.toggle('on',active);if(active)a.setAttribute('aria-current','page');else a.removeAttribute('aria-current')});
+  document.title=(id==='welcome'?'Vought Project Wiki':data.pageTitles[id]+' · Vought Project Wiki');
+  var i=ORDER.indexOf(id),pn=wiki.querySelector('#pn');pn.innerHTML='';
+  function adjacent(index,cls,label){var a=document.createElement('a');a.className=cls;a.href=href(ORDER[index]);a.dataset.wiki=pageKey(ORDER[index]);var small=document.createElement('small');small.textContent=label;var strong=document.createElement('strong');strong.textContent=data.pageTitles[ORDER[index]];var arr=document.createElement('span');arr.className='arr';arr.setAttribute('aria-hidden','true');arr.innerHTML=cls==='prev'?'<svg viewBox="0 0 24 24"><path d="M19 12H5M12 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>':'<svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>';var txt=document.createElement('span');txt.append(small,strong);a.append(arr,txt);pn.append(a)}
+  if(i>0)adjacent(i-1,'prev','Previous');if(i<ORDER.length-1)adjacent(i+1,'next','Next');
+  closeMenu();window.scrollTo({top:0,behavior:'instant'});window.dispatchEvent(new Event('scroll'));
+  if(!wasWiki&&!booting&&!calm()){wiki.classList.remove('enter');void wiki.offsetWidth;wiki.classList.add('enter');setTimeout(function(){wiki.classList.remove('enter')},700)}
+  if(pendingEl){var el=pendingEl;pendingEl=null;var pg=el.closest('.page');if(pg&&pg.id==='p-'+id)setTimeout(function(){el.scrollIntoView({behavior:calm()?'auto':'smooth',block:'center'})},wasWiki?120:420)}
+ }
+ function go(id){
+  id=aliases[id]||id;if(ORDER.indexOf(id)<0)id='welcome';
+  var b=document.body,det=document.getElementById('detail');
+  clearTimeout(tm);
+  if(booting||calm()){show(id);return}
+  if(!b.classList.contains('in-wiki')){
+   if(b.classList.contains('in-detail')){det.classList.remove('show');tm=setTimeout(function(){show(id)},340)}
+   else{b.classList.add('xout');tm=setTimeout(function(){show(id)},300)}
+   return;
+  }
+  var cur=wiki.querySelector('.page.show');
+  if(!cur||cur.id==='p-'+id){show(id);return}
+  cur.classList.add('leaving');tm=setTimeout(function(){show(id)},160);
+ }
+ function goHome(anchor,push){
+  var target=anchor||'#top',b=document.body,was=b.classList.contains('in-wiki');
+  if(push){var url=anchor||(location.pathname+location.search);if(was||anchor)history.pushState(null,'',url);else if(location.hash)history.replaceState(null,'',url)}
+  clearTimeout(tm);
+  function land(){
+   b.classList.remove('in-wiki','fading','xout');document.title='Vought Project';closeMenu();closePalette(false);
+   if(was&&!booting&&!calm()){b.classList.add('henter');setTimeout(function(){b.classList.remove('henter')},750)}
+   if(target==='#top'){window.scrollTo({top:0,behavior:(was||calm())?'instant':'smooth'})}
+   else{var section=document.querySelector(target);if(section)section.scrollIntoView({behavior:calm()?'instant':'smooth',block:'start'})}
+   window.dispatchEvent(new Event('scroll'));
+  }
+  if(was&&!booting&&!calm()){b.classList.add('xout');tm=setTimeout(land,300)}else land();
+ }
+ function move(page,anchor){
+  if(window.parent!==window){window.parent.postMessage({type:'vought-navigation',page:page,anchor:anchor},'*');return}
+  if(page==='home'){goHome(anchor,true);return}
+  history.pushState(null,'',href(aliases[page]||page));go(page);
+ }
+ wiki.querySelectorAll('a').forEach(function(a){var hash=a.getAttribute('href');if(hash&&ORDER.includes(hash.slice(1))){a.dataset.wiki=pageKey(hash.slice(1));a.href=href(hash.slice(1))}else if(hash==='index.html#devices'){a.dataset.wiki='home';a.dataset.anchor='#devices';a.href='#devices'}else if(hash==='index.html'){a.dataset.wiki='home';a.href='#top'}});
+ document.querySelector('body>nav .brand').dataset.wiki='home';
+ document.querySelectorAll('body>nav a[href="#devices"],body>nav a[href="#about"],body>nav a[href="#features"],body>nav a[href="#faq"]').forEach(function(a){a.dataset.wiki='home';a.dataset.anchor=a.getAttribute('href')});
+ document.addEventListener('click',function(e){var a=e.target.closest&&e.target.closest('[data-wiki]');if(a){e.preventDefault();move(a.dataset.wiki,a.dataset.anchor)}});
+ var brandLink=document.querySelector('body>nav .brand');
+ if(brandLink)brandLink.addEventListener('click',function(e){if(e.defaultPrevented||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button)return;e.preventDefault();goHome(undefined,true)});
+ function fromHash(){if(location.hash==='#wiki'||location.hash.indexOf('#wiki/')===0)go(location.hash.split('/')[1]||'overview');else if(document.body.classList.contains('in-wiki'))goHome(location.hash||'#top',false)}
+ window.addEventListener('popstate',fromHash);window.addEventListener('hashchange',fromHash);
+ var sres=document.getElementById('sres'),SECS=[],VOCAB={},kbi=-1,hits=[];
+ var SYN={avb:['vbmeta','verified boot','verification'],vbmeta:['avb','verified boot'],recovery:['twrp','orangefox','ofox'],twrp:['recovery'],orangefox:['recovery','ofox'],ofox:['orangefox','recovery'],
+  wipe:['format','erase'],format:['wipe','erase'],erase:['format','wipe'],reset:['format','wipe'],download:['odin','download mode'],odin:['download mode','ap slot'],
+  unlock:['oem','bootloader'],bootloader:['oem','unlock'],oem:['bootloader','unlocking'],sideload:['adb sideload','adb'],adb:['sideload','platform-tools'],fastboot:['platform-tools','fastboot_flasher'],
+  firmware:['stock','samfw'],stock:['firmware','samfw'],brick:['bootloop','disclaimer'],bootloop:['first boot','vbmeta'],stuck:['first boot','bootloop'],boot:['reboot','first boot'],
+  buttons:['button combinations','volume'],combo:['button combinations','volume'],keys:['button combinations','volume'],install:['flash'],flash:['install'],requirements:['what you will need','requirements'],need:['what you will need','requirements']};
+ var DEV={a51:'install-a51',a515f:'install-a51',a12:'install-a12',a127x:'install-a12',a127:'install-a12',a35:'install-a35',a356e:'install-a35'};
+ var STOP={how:1,do:1,i:1,to:1,the:1,a:1,an:1,my:1,on:1,in:1,of:1,for:1,is:1,what:1,where:1,can:1,why:1,does:1,with:1,and:1,it:1,should:1,first:1,before:1,after:1,me:1,get:1,use:1,need:0};
+ function txt(el){return (el.textContent||'').replace(/\s+/g,' ').trim()}
+ ORDER.forEach(function(id){
+  var art=wiki.querySelector('#p-'+id),n=0,sec=data.pageTitles[id];
+  function add(el,title,body){if(!el.id)el.id='s-'+id+'-'+(n++);SECS.push({page:id,el:el,title:title,body:body,lt:title.toLowerCase(),lb:body.toLowerCase()});(title+' '+body).toLowerCase().split(/[^a-z0-9_.-]+/).forEach(function(w){if(w.length>2)VOCAB[w]=1})}
+  add(art,data.pageTitles[id],txt(art.querySelector('.lead')||art));
+  art.querySelectorAll('h2,ol.steps>li,.callout,tbody tr,ul>li').forEach(function(el){
+   if(el.closest('.callout')&&!el.classList.contains('callout'))return;
+   if(el.tagName==='H2'){sec=txt(el);var p=el.nextElementSibling,b='';while(p&&!/^(H2|OL)$/.test(p.tagName)){b+=' '+txt(p);p=p.nextElementSibling}add(el,sec,b.trim()||sec);return}
+   if(el.tagName==='LI'&&el.parentNode.tagName==='OL'){var i=Array.prototype.indexOf.call(el.parentNode.children,el)+1,h=el.querySelector('h3');add(el,'Step '+i+': '+(h?txt(h):''),txt(el).replace(h?txt(h):'','').trim());return}
+   if(el.classList.contains('callout')){var bb=el.querySelector('b');add(el,bb?txt(bb):'Note',txt(el).replace(bb?txt(bb):'','').trim());return}
+   if(el.tagName==='TR'){var c=el.children;add(el,txt(c[0]),c[1]?txt(c[1]):'');return}
+   add(el,sec,txt(el));
+  });
+ });
+ function lev(a,b){if(Math.abs(a.length-b.length)>2)return 9;var r=[],i,j;for(j=0;j<=b.length;j++)r[j]=j;for(i=1;i<=a.length;i++){var pv=r[0];r[0]=i;for(j=1;j<=b.length;j++){var t=r[j];r[j]=Math.min(r[j]+1,r[j-1]+1,pv+(a[i-1]===b[j-1]?0:1));pv=t}}return r[b.length]}
+ function fix(w){if(VOCAB[w]||SYN[w]||DEV[w]||w.length<4)return w;var vk=Object.keys(VOCAB);for(var vi=0;vi<vk.length;vi++)if(vk[vi].indexOf(w)>=0)return w;var best=w,bd=w.length>6?2:1;Object.keys(VOCAB).concat(Object.keys(SYN)).forEach(function(v){var x=lev(w,v);if(x<=bd&&x>0){bd=x-0.5;best=v}});return best}
+ function escH(t){return t.replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+ function hl(t,terms){var h=escH(t);terms.sort(function(a,b){return b.length-a.length}).forEach(function(w){if(w.length<2)return;h=h.replace(new RegExp('('+w.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')(?![^<]*>)','gi'),'<mark>$1</mark>')});return h}
+ function snip(body,terms,len){var lb=body.toLowerCase(),at=-1;terms.some(function(w){var i=lb.indexOf(w);if(i>=0){at=i;return true}});if(body.length<=len)return body;if(at<0)return body.slice(0,len)+'…';var st=Math.max(0,at-Math.round(len/3));var out=body.slice(st,st+len);return (st>0?'…':'')+out+(st+len<body.length?'…':'')}
+ function search(raw){
+  var s=raw.trim().toLowerCase();if(!s)return {hits:[],fixed:null,dev:null};
+  var words=s.split(/[^a-z0-9_.-]+/).filter(Boolean),dev=null,fixedAny=false,terms=[],groups=[];
+  words.forEach(function(w){if(DEV[w]){dev=DEV[w];return}if(STOP[w])return;var f=fix(w);if(f!==w)fixedAny=true;var g=[f].concat(SYN[f]||[]);if(f.length>4&&f.slice(-1)==='s')g.push(f.slice(0,-1));if(/ing$/.test(f))g.push(f.slice(0,-3));groups.push(g);terms=terms.concat(g)});
+  var phrase=groups.map(function(g){return g[0]}).join(' ');
+  var res=SECS.map(function(x){
+   var sc=0,matched=0;
+   groups.forEach(function(g){var best=0;g.forEach(function(t,ix){var w=ix?0.6:1;if(x.lt.indexOf(t)>=0)best=Math.max(best,6*w);else if(x.lb.indexOf(t)>=0)best=Math.max(best,2.5*w)});if(best)matched++;sc+=best});
+   if(groups.length&&!matched)return null;
+   if(groups.length)sc*=matched/groups.length;
+   if(phrase.length>3&&x.lt.indexOf(phrase)>=0)sc+=8;else if(phrase.length>3&&x.lb.indexOf(phrase)>=0)sc+=4;
+   if(dev){var isDevPage=/^install-/.test(x.page);if(x.page===dev)sc+=groups.length?6:10;else if(isDevPage)sc-=6;else if(!groups.length)return null;
+    if(x.page==='custom-recovery'||x.page==='download-mode'){var dn={'install-a51':'a51','install-a12':'a12','install-a35':'a35'}[dev];if(x.lt.indexOf(dn)>=0||x.lb.indexOf(dn)>=0)sc+=3}}
+   if(x.el.tagName==='ARTICLE')sc+=groups.length?0.5:1;
+   if(/^Step/.test(x.title))sc+=0.4;
+   return sc>0.5?{x:x,sc:sc}:null}).filter(Boolean).sort(function(a,b){return b.sc-a.sc});
+  var seen={},out=[];res.forEach(function(r){var k=r.x.page+'|'+r.x.title;if(!seen[k]&&out.length<7){seen[k]=1;out.push(r)}});
+  return {hits:out,terms:terms.filter(function(t){return t.length>1}),fixed:fixedAny?(dev?words.filter(function(w){return DEV[w]}).join(' ')+' ':'')+groups.map(function(g){return g[0]}).join(' '):null,dev:dev};
+ }
+ var pal=document.getElementById('spal'),scount=document.getElementById('scount'),lastHTML='',lastFocus=null,GROUP={},grp='';
+ Array.prototype.forEach.call(wiki.querySelectorAll('#nav>*'),function(n){if(n.classList.contains('sgrp'))grp=n.textContent;else if(n.dataset.p)GROUP[n.dataset.p]=grp});
+ function pageHits(){return SECS.filter(function(x){return x.el.tagName==='ARTICLE'}).map(function(x){return {x:x,sc:0}})}
+ function row(h,i,terms){
+  var x=h.x,art=x.el.tagName==='ARTICLE',lab=terms?(art?'Page':data.pageTitles[x.page]):(GROUP[x.page]||'');
+  return '<a id="so'+i+'" data-i="'+i+'" role="option" aria-selected="false" href="'+href(x.page)+'"><strong>'+(terms?hl(x.title,terms):escH(x.title))+'</strong><small>'+escH(lab)+'</small>'+(terms?'<span>'+hl(snip(x.body,terms,150),terms)+'</span>':'')+'</a>';
+ }
+ function setKb(i,scroll){
+  var as=sres.querySelectorAll('a[data-i]');kbi=i;
+  as.forEach(function(a,n){var on=n===i;a.classList.toggle('kb',on);a.setAttribute('aria-selected',on?'true':'false')});
+  if(as[i]){q.setAttribute('aria-activedescendant',as[i].id);if(scroll)as[i].scrollIntoView({block:'nearest'})}else q.removeAttribute('aria-activedescendant');
+ }
+ function render(){
+  var s=q.value.trim(),r=search(q.value),h='',terms=null;
+  if(!s){hits=pageHits();h='<div class="shead">Jump to a page</div>'+hits.map(function(x,i){return row(x,i,null)}).join('')}
+  else{
+   hits=r.hits;terms=r.terms;
+   if(hits.length){
+    if(r.fixed)h+='<div class="hint">Showing results for <b>'+escH(r.fixed)+'</b></div>';
+    else if(r.dev)h+='<div class="hint">Results focused on the <b>'+escH(data.pageTitles[r.dev])+'</b> guide</div>';
+    h+=hits.map(function(x,i){return row(x,i,terms)}).join('');
+   }else h='<div class="empty">Nothing matched \u201c'+escH(s)+'\u201d. Try <button type="button" data-q="vbmeta">vbmeta</button>, <button type="button" data-q="download mode">download mode</button> or <button type="button" data-q="a35 format data">a35 format data</button>.</div>';
+  }
+  if(h!==lastHTML){sres.innerHTML=h;lastHTML=h;sres.scrollTop=0}
+  setKb(hits.length?0:-1,false);
+  scount.textContent=!s?'':(hits.length?hits.length+(hits.length===1?' result':' results'):'No results');
+ }
+ function openPalette(){
+  if(pal.classList.contains('open'))return;
+  lastFocus=document.activeElement;
+  pal.classList.add('open');pal.setAttribute('aria-hidden','false');q.setAttribute('aria-expanded','true');
+  render();
+  q.focus({preventScroll:true});if(document.activeElement!==q)requestAnimationFrame(function(){q.focus({preventScroll:true})});
+  q.select();
+ }
+ function closePalette(restore){
+  if(!pal.classList.contains('open'))return;
+  pal.classList.remove('open');pal.setAttribute('aria-hidden','true');q.setAttribute('aria-expanded','false');q.blur();
+  if(restore&&lastFocus&&lastFocus.focus&&document.contains(lastFocus))lastFocus.focus({preventScroll:true});
+  lastFocus=null;
+ }
+ function openHit(i){var x=hits[i]&&hits[i].x;if(!x)return;closePalette(false);pendingEl=x.el.tagName==='ARTICLE'?null:x.el;move(pageKey(x.page))}
+ function step(d){if(!hits.length)return;setKb((kbi+d+hits.length)%hits.length,true)}
+ q.addEventListener('input',render);
+ pal.addEventListener('click',function(e){
+  if(e.target.closest('.spal-back')||e.target.closest('.spal-x')){closePalette(true);return}
+  var a=e.target.closest('a[data-i]');if(a){e.preventDefault();openHit(+a.dataset.i);return}
+  var b=e.target.closest('button[data-q]');if(b){q.value=b.dataset.q;render();q.focus()}
+ });
+ sres.addEventListener('mousemove',function(e){var a=e.target.closest('a[data-i]');if(a&&+a.dataset.i!==kbi)setKb(+a.dataset.i,false)});
+ pal.addEventListener('keydown',function(e){
+  if(e.isComposing)return;
+  if(e.key==='Escape'){e.preventDefault();e.stopPropagation();closePalette(true)}
+  else if(e.key==='ArrowDown'){e.preventDefault();step(1)}
+  else if(e.key==='ArrowUp'){e.preventDefault();step(-1)}
+  else if(e.key==='Enter'&&e.target===q){e.preventDefault();if(hits.length)openHit(kbi<0?0:kbi)}
+  else if(e.key==='Tab'){e.preventDefault();var f=Array.prototype.slice.call(pal.querySelectorAll('input,button[data-q]')),n=f.indexOf(document.activeElement);f[(n+(e.shiftKey?-1:1)+f.length)%f.length].focus()}
+ });
+ ['sopen','msearch'].forEach(function(id){var b=document.getElementById(id);if(b)b.addEventListener('click',openPalette)});
+ var skey=document.getElementById('skey');if(skey&&/Mac|iPhone|iPad/.test(navigator.platform||navigator.userAgent||''))skey.textContent='\u2318 K';
+ mb.addEventListener('click',function(){var open=side.classList.toggle('open');document.body.classList.toggle('wiki-menu-open',open);mb.setAttribute('aria-expanded',String(open))});
+ document.addEventListener('keydown',function(e){
+  if(!document.body.classList.contains('in-wiki'))return;
+  var k=(e.key||'').toLowerCase();
+  if((e.ctrlKey||e.metaKey)&&k==='k'){e.preventDefault();if(pal.classList.contains('open'))closePalette(true);else openPalette();return}
+  if(k==='/'&&!e.ctrlKey&&!e.metaKey&&!e.altKey&&!pal.classList.contains('open')){var t=e.target,tag=t&&t.tagName;if(!(tag==='INPUT'||tag==='TEXTAREA'||tag==='SELECT'||(t&&t.isContentEditable))){e.preventDefault();openPalette()}}
+  if(e.key==='Escape')closeMenu();
+ });
+ if(document.body.dataset.startWiki)go(document.body.dataset.startWiki);else fromHash();
+ booting=false;
+})();
+</script>
+
+<script>
+(function(){
+ var egg=document.getElementById('egg'),box=egg.querySelector('.egg-box'),logos=document.querySelectorAll('.hero .logo,footer .brand img'),tip=document.getElementById('eggtip'),tipT=0,last=null,t=0,taps=0,tapT=0,seq=[],K='arrowup,arrowup,arrowdown,arrowdown,arrowleft,arrowright,arrowleft,arrowright,b,a';
+ function say(m){tip.textContent=m;tip.classList.add('on');clearTimeout(tipT);tipT=setTimeout(function(){tip.classList.remove('on')},1400)}
+ function open(){tip.classList.remove('on');if(!egg.hidden)return;clearTimeout(t);last=document.activeElement;egg.hidden=false;void egg.offsetWidth;place();egg.classList.add('open');egg.setAttribute('aria-hidden','false');box.focus({preventScroll:true})}
+ function place(){var fr=egg.querySelector('.egg-frame'),W=fr.clientWidth;Array.prototype.forEach.call(egg.querySelectorAll('.egg-tip'),function(t){var x=parseFloat(t.style.getPropertyValue('--tx'))/100*W,w=t.offsetWidth,c=Math.min(Math.max(x,w/2-12),W-w/2+12),tl=Math.min(Math.max(w/2+x-c,10),w-10);t.style.left=c+'px';t.style.setProperty('--tail',tl+'px')})}
+ window.addEventListener('resize',function(){if(!egg.hidden)place()});
+ function clr(){Array.prototype.forEach.call(egg.querySelectorAll('.egg-hot.on'),function(h){h.classList.remove('on')})}
+ function close(){if(egg.hidden||!egg.classList.contains('open'))return;clr();egg.classList.remove('open');egg.setAttribute('aria-hidden','true');t=setTimeout(function(){egg.hidden=true},300);if(last&&last.focus&&document.contains(last))last.focus({preventScroll:true});last=null}
+ Array.prototype.forEach.call(document.querySelectorAll('[data-team]'),function(b){b.addEventListener('click',function(e){e.preventDefault();open()})});
+ document.addEventListener('keydown',function(e){
+  if(!egg.hidden&&e.key==='Escape'){e.preventDefault();close();return}
+  if(!egg.hidden&&e.key==='Tab'){e.preventDefault();var f=Array.prototype.slice.call(egg.querySelectorAll('.egg-hot,.egg-x')),n=f.indexOf(document.activeElement);f[n<0?(e.shiftKey?f.length-1:0):(n+(e.shiftKey?-1:1)+f.length)%f.length].focus();return}
+ });
+ egg.addEventListener('click',function(e){
+  var h=e.target.closest('.egg-hot');if(h){if(!(e.pointerType==='touch'||!window.matchMedia('(hover:hover)').matches)){clr();return}var was=h.classList.contains('on');clr();if(!was)h.classList.add('on');return}
+  if(e.target.closest('.egg-back')||e.target.closest('.egg-x')||e.target===egg)close();else clr()
+ });
+})();
+</script>
+<script>
+(function(){
+ var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+ document.addEventListener('click',function(e){
+  var s=e.target.closest('.cl details>summary');if(!s||reduce||!document.body.animate)return;
+  var d=s.parentNode,u=d.querySelector('ul');e.preventDefault();
+  if(d._a){d._a.cancel();d._a=null}
+  var start=d.getBoundingClientRect().height,opening=!d.open||d.classList.contains('closing');
+  var end;
+  if(opening){d.open=true;d.classList.remove('closing');end=d.getBoundingClientRect().height}
+  else{var cs=getComputedStyle(d);end=s.getBoundingClientRect().height+parseFloat(cs.paddingTop)+parseFloat(cs.paddingBottom)+parseFloat(cs.borderTopWidth)+parseFloat(cs.borderBottomWidth);d.classList.add('closing')}
+  d.style.overflow='hidden';
+  var a=d._a=d.animate({height:[start+'px',end+'px']},{duration:380,easing:'cubic-bezier(.3,.7,.2,1)'});
+  if(u){if(d._ua)d._ua.cancel();d._ua=u.animate({opacity:opening?[0,1]:[1,0],transform:opening?['translateY(-6px)','none']:['none','translateY(-6px)']},{duration:opening?320:220,delay:opening?80:0,fill:'both',easing:'ease'})}
+  a.onfinish=function(){if(d._a!==a)return;d._a=null;if(!opening)d.open=false;d.style.overflow='';d.classList.remove('closing')};
+ });
+})();
+</script>
+<script>
+document.addEventListener('click',function(ev){var b=ev.target.closest&&ev.target.closest('.btn.inf');if(!b)return;var p=document.getElementById(b.getAttribute('aria-controls'));if(!p)return;var o=b.getAttribute('aria-expanded')==='true';if(o){p.style.maxWidth='0px';p.classList.remove('open')}else{p.style.maxWidth=p.scrollWidth+'px';p.classList.add('open')}b.setAttribute('aria-expanded',o?'false':'true');b.setAttribute('aria-label',o?'Show details':'Hide details');p.setAttribute('aria-hidden',o?'true':'false')});
+</script>
+
+<style>
+#comingSoonToast{position:fixed;left:50%;bottom:32px;transform:translate(-50%,20px);background:#1c1c22;color:#fff;border:1px solid rgba(255,255,255,.15);padding:12px 22px;border-radius:12px;font:600 14px/1.3 system-ui,-apple-system,Segoe UI,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.45);opacity:0;pointer-events:none;transition:opacity .25s ease,transform .25s ease;z-index:99999}
+#comingSoonToast.show{opacity:1;transform:translate(-50%,0)}
+</style>
+<div id="comingSoonToast" role="status" aria-live="polite">Discord server coming soon!</div>
+<script>
+(function(){
+ var link=document.getElementById('discordLink'),toast=document.getElementById('comingSoonToast'),t;
+ if(!link||!toast)return;
+ link.addEventListener('click',function(e){
+  e.preventDefault();
+  toast.classList.add('show');
+  clearTimeout(t);
+  t=setTimeout(function(){toast.classList.remove('show')},2500);
+ });
+})();
+</script>
+</body>
+</html>
