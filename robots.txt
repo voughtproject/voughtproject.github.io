@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://voughtproject.github.io/sitemap.xml
