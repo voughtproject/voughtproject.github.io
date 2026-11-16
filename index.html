@@ -26,7 +26,7 @@
 <meta name="twitter:title" content="Vought Project">
 <meta name="twitter:description" content="Making your device Stronger, Smarter &amp; Better.">
 <meta name="twitter:image" content="https://voughtproject.github.io/preview.png">
-<link rel="icon" id="favicon" type="image/png" sizes="48x48" href="/favicon-48.png">
+<link rel="icon" id="favicon" type="image/png" sizes="48x48" href="/favicon-light-48.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -799,7 +799,7 @@ document.getElementById('panel').addEventListener('click',function(ev){var b=ev.
 (function(){
  var root=document.documentElement,fab=document.getElementById('fab'),wipe=document.getElementById('wipe'),busy=false;
  var BG={light:'#f5f5f3',dark:'#000'};
- var FAV={light:'/favicon-48.png',dark:'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAADnUlEQVR4nM2XTyisfRTHz+/3GDRvQ8i/MZNmIcWwlbKQLK6bbLBQSk1iKSksiGyUsrtdG2wssLJ/pZDSZSOJLFiIoZnRuGVCM3zehWeezHX/zH1fr7mnTj2d3/P7fr/nnN/z54iIKBHR8mwfReRvEfkqIk+m8x89jvPVxP5ocmmTWwwz8PkNyJL1zyZnnNsifzT9/yJ+iR8XIR/MQPSNSp5MS6Lm9QcRkTUzGHvHFsRMzjUlIrci8pekxiLKVJQy0ykWwHcrAIjf75ezszMxDEOi0ajU1NSIz+eTiooKGRoakvX1ddFai1JK4BlCKSUiIjabzVp7fHwUt9stJSUl1vorvm99dnaW09NTDMMgLS0NEWF8fJzLy0vKy8uJxWJ0dXXhdDpxu90UFxfjdDopKiqisLAQm82GiKC1RinF8fExCwsLPzqQr4MOh4O7uzsGBgYQEQzDID09nUgkQl9fH4ODg4TDYU5OTri6uiIYDHJ1dUUoFCIYDFJQUIBSChGhp6eHWCxGbm5u8gJEhP7+fh4eHnA4HFYVent7iUajZGdnk5eXR35+Pi6XC4/HQ2lpKaFQiJmZGUSEtLQ0MjIyuLm5YWxs7GeP5Oug1hqbzUYgEGB6etoC1FpzcXHBp0+fXu3x+Xw8PDyQk5OD1hoRYXh4mNvbW+x2uxVLSkA8446ODgCcTieGYSAitLW1AeByudBaYxgGdrudSCTC6Oio1bKsrCzu7+/p6+tLwEy6BXHFh4eHLC0tJYAcHR2xuLho3TsxMUE4HCYzM9O6Z2pqikAgYFUufiaSFhDPuL6+HgCv12sBNTQ0AFBRUYHdbufp6Ynu7m5rX0FBAQCdnZ0JWL8l4OXG9fV1NjY2rJjNZiMWi9He3s7k5CTn5+copazs5+bmOD09TajkvxaglKKyshKAxsZGRITJyUn8fj9lZWUAtLS0WGQejweA5ubmZLL/uYCXAMvLyxwcHFjlbW1tZX5+nv39/YTzsbKywt7eXrLZ/1pAvO9ut5ubmxv29/fZ3t6mqqoKgNraWpRSaK2prq4GoK6uLtnsfy3gJdDExAQANTU1rK6usra2lpD9xsZGwllJBjspAUoplFIUFxczMjJCU1MTAGVlZVaZ40+G1+tFKfW2Ar713d1d7u7u2NzcZGdnh62tLa6vr613w2+Qf/9z/J72Z/6QvKdpEYmkkD+iReSLPFfh8R2J48PJF5E/YDARSfFolvLhNKXj+T90BeFda05uZwAAAABJRU5ErkJggg=='};function setIcon(x){var l=document.getElementById('favicon');if(l&&FAV[x])l.href=FAV[x]}
+ var FAV={light:'/favicon-light-48.png',dark:'/favicon-dark-48.png'};function setIcon(x){var l=document.getElementById('favicon');if(l&&FAV[x])l.href=FAV[x]}
  function cur(){return root.getAttribute('data-theme')==='dark'?'dark':'light'}
  function atTop(){return window.scrollY<=20}
  function label(){var up=!atTop();fab.classList.toggle('up',up);fab.setAttribute('aria-label',up?'Back to top':(cur()==='dark'?'Switch to light mode':'Switch to dark mode'))}
