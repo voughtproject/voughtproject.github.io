@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Vought Project: Download test</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fff;--ink:#14161a;--mute:#5b616b;--card:#f3f4f6;--line:#e1e3e8;--acc:#14161a;--on:#fff}
+@media (prefers-color-scheme:dark){:root{--bg:#0e1013;--ink:#eceef1;--mute:#9aa1ab;--card:#171a1f;--line:#262a31;--acc:#eceef1;--on:#0e1013}}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:var(--bg);color:var(--ink);font-family:Montserrat,system-ui,sans-serif;padding:24px}
+.card{width:100%;max-width:460px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:32px}
+h1{margin:0 0 8px;font-size:22px;font-weight:800}
+p{margin:0 0 20px;color:var(--mute);font-size:14px;line-height:1.6}
+.btn{display:inline-block;background:var(--acc);color:var(--on);text-decoration:none;font-weight:600;font-size:14px;padding:12px 22px;border-radius:12px}
+.back{display:block;margin-top:20px;color:var(--mute);font-size:13px}
+</style>
+</head>
+<body>
+<main class="card">
+  <h1>Download test</h1>
+  <p>This is a small test file used to check the protected download. Press the button and the file should start downloading directly, with no Google Drive page.</p>
+  <a class="btn" id="dl" href="#">Download</a>
+  <a class="back" href="/">Back to home</a>
+</main>
+<script>
+/* Same Worker address as in index.html (var DL). Keep the trailing /dl/ */
+var DL='https://dl.musaalvie8.workers.dev/dl/';
+document.getElementById('dl').href=DL+'test';
+</script>
+</body>
+</html>
